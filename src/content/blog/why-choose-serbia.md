@@ -2,7 +2,7 @@
 title: "Your Future in the Heart of Europe: Why Serbia is the Top Choice"
 pubDate: 2026-02-12
 description: "Discover why reliable data shows Serbia is the best place for your permanent European business base."
-heroImage: "/imgsrb.jpg"
+heroImage: "/Screenshot 2026-02-12 222547.png"
 category: "General"
 ---
 
