@@ -36,5 +36,5 @@ Eligibility: Available to citizens of over 75 countries that have reciprocal pro
 Timeline and Residency Status
 Your initial permit is valid for up to three years. While it does not currently offer Schengen visa-free travel, it creates a direct path to permanent residency after three years of living in Serbia.
 
-Once you hold permanent residency and have completed three years of continuous stay, you are eligible for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide.
+Once you hold permanent residency and have completed three years of continuous stay, you are eligible for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide."
 ---
