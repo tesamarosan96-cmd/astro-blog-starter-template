@@ -20,7 +20,7 @@ Fast Path to Citizenship: You may apply for naturalization after the permanent r
 
 # INVESTMENT PATHWAYS
 
- 1. BUSINESS FORMATION
+ 1. Business formation
 
 Options: Start a new company: Open a sole proprioter or LLC
 
@@ -32,7 +32,7 @@ Housing: You must maintain a local address; rentals typically €300-€1500 per
 Old town location in the center of Belgrade is about €400 for a studio, €500 for a 1.5 room apartment, and €800 for a 2.0 or 3.0 room apartment. 
 High-end locations like Belgrade Waterfront or Belville are about €800 euros per month for a studio, €1200 for a 1.5 room apartment, and €1500 for a 2.0 or 3.0 room apartment with a garage.  
 
- 2. REAL ESTATE ACQUISITION
+ 2. Real estate acquisition
 
 Entry Point: There is no legal minimum, but prices start at €25,000 in rural areas (very old houses from little as €8.000) or €80,000 for apartments in major cities like Belgrade. The average price for a family house in a village is €70.000 or €180.000 for an apartment in Belgrade. 
 
