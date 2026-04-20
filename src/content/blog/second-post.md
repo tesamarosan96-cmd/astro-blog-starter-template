@@ -2,7 +2,7 @@
 pubDate: 2026-04-20
 title: "Residence by Investment"
 description: "Kratak opis od jedne rečenice o tome šta čitalac dobija ovim tekstom."
-heroImage: "/images/west-65-tower-cover-1.jpg"
+heroImage: "/west-65-tower-cover-1.jpg"
 ---
 Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, move toward permanent status, and eventually apply for citizenship.
 
