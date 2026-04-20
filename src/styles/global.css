@@ -151,4 +151,12 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+
+	/* Hover efekat za socijalne mreže */
+.social-links a {
+    transition: opacity 0.3s ease; /* Ovo čini da promena bude glatka, a ne nagla */
+}
+
+.social-links a:hover {
+    opacity: 0.8; /* Ikonica postaje blago prozirna kada pređeš mišem preko nje */
 }
