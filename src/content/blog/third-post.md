@@ -1,6 +1,6 @@
 ---
 title: "Residency by investment"
-pubDate: "Jul 22 2025"
+pubDate: "April 20 2026"
 heroImage: "/blog-placeholder-2.jpg"
 description: "Residency by investment"
 ---
