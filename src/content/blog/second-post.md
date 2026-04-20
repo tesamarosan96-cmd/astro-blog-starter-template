@@ -7,6 +7,7 @@ heroImage: "/west-65-tower-cover-1.jpg"
 Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, transition to permanent status, and eventually apply for citizenship.
 
 Key Advantages
+
 Speed: Efficient application processing.
 
 Cost-Efficient: High-growth economy with competitive tax rates and low overhead.
