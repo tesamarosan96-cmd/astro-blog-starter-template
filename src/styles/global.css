@@ -152,9 +152,13 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 
-	/* Hover efekat za socijalne mreže */
-img:hover {
-    transform: scale(2.0) !important;
-    border: 5px solid red !important;
+	/* Univerzalni hover za sve slike u headeru */
+header a img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header a img:hover {
+    opacity: 0.8 !important;
+    transform: scale(1.1) !important;
 }
 }
