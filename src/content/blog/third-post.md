@@ -1,5 +1,8 @@
 ---
 title: "Residency by investment"
+pubDate: "Jul 22 2025"
+heroImage: "/blog-placeholder-2.jpg"
+---
 description: "Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, move toward permanent status, and eventually apply for citizenship.
 
 Key Advantages
@@ -37,6 +40,4 @@ Timeline and Residency Status
 Your initial permit is valid for up to three years. While it does not currently offer Schengen visa-free travel, it creates a direct path to permanent residency after three years of living in Serbia.
 
 Once you hold permanent residency and have completed three years of continuous stay, you are eligible for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide."
-pubDate: "Jul 22 2025"
-heroImage: "/blog-placeholder-2.jpg"
----
+
