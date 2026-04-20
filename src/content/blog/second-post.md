@@ -4,7 +4,7 @@ title: "Residence by Investment"
 description: "Kratak opis od jedne rečenice o tome šta čitalac dobija ovim tekstom."
 heroImage: "/west-65-tower-cover-1.jpg"
 ---
-Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, move toward permanent status, and eventually apply for citizenship.
+Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, transition to permanent status, and eventually apply for citizenship.
 
 Key Advantages
 Speed: Efficient application processing.
@@ -25,7 +25,7 @@ Options: Start a new company, open a branch, or register as a sole proprietor.
 
 Digital Setup: Most documentation can be handled without your presence.
 
-Operating Costs: Expect annual expenses starting at €3,900 (covers rent, accounting, and taxes).
+Operating Costs: The company formation process is only €149 for an entrepreneur or €199 for an LLC, and the virtual address is €400 euros a year or €35 per month! Expect annual expenses starting at €3,900 (covers rent, accounting, and taxes).
 
 Housing: You must maintain a local address; rentals typically €300-€1200 per month
 
