@@ -4,7 +4,7 @@ pubDate: "April 20 2026"
 heroImage: "/blog-placeholder-2.jpg"
 description: "Residency by investment"
 ---
-# Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, move toward permanent status, and eventually apply for citizenship.
+Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, move toward permanent status, and eventually apply for citizenship.
 
 Key Advantages
 Speed: Efficient application processing.
