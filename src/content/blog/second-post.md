@@ -6,7 +6,7 @@ heroImage: "/west-65-tower-cover-1.jpg"
 ---
 Serbia is a high-growth business hub located at the intersection of Central and Southeast Europe. As a UN member and EU candidate, it offers a secure environment for international business owners. Through the investment program, you and your family can gain residency, transition to permanent status, and eventually apply for citizenship.
 
-# KEY ADVANTAGES
+# Key advantages
 
 Speed: Efficient application processing.
 
@@ -18,7 +18,7 @@ Family Inclusion: Spouses and children can be added in your application- with a 
 
 Fast Path to Citizenship: You may apply for naturalization after the permanent residence
 
-# INVESTMENT PATHWAYS
+# Investment  pathways 
 
  1. Business formation
 
@@ -40,7 +40,7 @@ Location: You can buy property anywhere in the country.
 
 Eligibility: Available to citizens of over 75 countries that have reciprocal property agreements with Serbia.
 
-# TIMELINE AND RESIDENCY STATUS
+# Timeline and residency status
 Your initial permit is valid for up to three years. While it does not currently offer Schengen visa-free travel, it creates a direct path to permanent residency after three years of living in Serbia.
 
 Once you hold permanent residency and have completed three years of continuous stay, you are eligible for permanent residency and after 3 more years for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide. 
