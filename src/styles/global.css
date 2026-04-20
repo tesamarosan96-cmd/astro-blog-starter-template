@@ -154,10 +154,11 @@ hr {
 
 	/* Hover efekat za socijalne mreže */
 .social-links a {
-    transition: opacity 0.3s ease; /* Ovo čini da promena bude glatka, a ne nagla */
+    transition: transform 0.3s ease; /* Glatka animacija */
+    display: inline-block; /* Obavezno za transform */
 }
 
 .social-links a:hover {
-    opacity: 0.8; /* Ikonica postaje blago prozirna kada pređeš mišem preko nje */
+    transform: scale(1.5) !important; /* Ovo će značajno uvećati ikonicu */
 }
 }
