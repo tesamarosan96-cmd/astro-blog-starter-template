@@ -3,7 +3,7 @@ title: "Your Future in the Heart of Europe: Why Serbia is the Top Choice"
 pubDate: 2026-02-12
 description: "Discover why reliable data shows Serbia is the best place for your permanent European business base."
 heroImage: "/Screenshot 2026-02-12 222547.png"
-category: "General"
+category: "General" 
 ---
 
 The results of the latest **OutRush 2026** global study are in, and they confirm what we see every day: **Serbia has become a premier destination for talented professionals and growing businesses.**
