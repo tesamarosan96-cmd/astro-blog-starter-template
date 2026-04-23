@@ -6,7 +6,7 @@ heroImage: "/Screenshot 2026-02-12 222547.png"
 category: "General"
 ---
 
-The results of the latest **OutRush 2026** global study are in, and they confirm what we see every day: **Serbia has become a premier destination for talented professionals and growing businesses.**
+The results of the latest **OutRush** global study are in, and they confirm what we see every day: **Serbia has become a premier destination for talented professionals and growing businesses.**
 
 While many people initially moved to different countries, the most successful are now choosing Serbia as their permanent home. Here is why this vibrant, welcoming country is the perfect place for your next chapter.
 
