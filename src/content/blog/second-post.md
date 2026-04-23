@@ -28,7 +28,7 @@ Digital Setup: Documentation can be handled without your presence
 
 Operating Costs: The company formation process is only €149 for an entrepreneur or €199 for an LLC, and the virtual address is €400 euros a year or €35 per month!
 
-*Housing*: To fulfill residency requirements, you must maintain a registered local address. Rental rates typically range from €300 to €1500 per month depending on the location and asset class.
+Housing: To fulfill residency requirements, you must maintain a registered local address. Rental rates typically range from €300 to €1500 per month depending on the location and asset class.
 
 Belgrade Periphery: Apartments in suburban districts range from €250–€550.
 
