@@ -10,13 +10,13 @@ Serbia is a high-growth business hub located at the intersection of Central and 
 
 Speed: Efficient application processing.
 
-Cost-Efficient: High-growth economy with competitive tax rates and low overhead.
+Cost-Efficient: High-growth economy with competitive tax rates.
 
 Market Access: Duty-free trade with the EU and major global markets (EFTA, CEFTA, EAEU).
 
 Family Inclusion: Spouses and children can be added in your application- with a 50 % discount
 
-Fast Path to Citizenship: You may apply for naturalization after the permanent residence
+Fast Path to Citizenship: You may apply for naturalization after the permanent residence.
 
 # Investment  pathways 
 
@@ -29,6 +29,7 @@ Digital Setup: Documentation can be handled without your presence
 Operating Costs: The company formation process is only €149 for an entrepreneur or €199 for an LLC, and the virtual address is €400 euros a year or €35 per month!
 
 Housing: You must maintain a local address; rentals typically €300-€1500 per month. 
+Remote areas in Belgrade are about €250-550 for an apartment. 
 Old town location in the center of Belgrade is about €400 for a studio, €500 for a 1.5 room apartment, and €800 for a 2.0 or 3.0 room apartment. 
 High-end locations like Belgrade Waterfront or Belville are about €800 euros per month for a studio, €1200 for a 1.5 room apartment, and €1500 for a 2.0 or 3.0 room apartment with a garage.  
 
@@ -43,5 +44,5 @@ Eligibility: Available to citizens of over 75 countries that have reciprocal pro
 # Timeline and residency status
 Your initial permit is valid for up to three years. While it does not currently offer Schengen visa-free travel, it creates a direct path to permanent residency after three years of living in Serbia.
 
-Once you hold permanent residency and have completed three years of continuous stay, you are eligible for permanent residency and after 3 more years for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide. 
+Once you hold permanent residency and have completed three years of continuous stay, you are eligible for permanent residency and eventually for citizenship. A Serbian passport provides visa-free access to more than 130 countries worldwide. 
 
