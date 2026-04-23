@@ -31,7 +31,7 @@ Operating Costs: The company formation process is only €149 for an entrepreneu
 HOUSING: Rental rates typically range from €300 to €1500 per month depending on the location.
   Belgrade Periphery: Apartment retals are €250–€550.
   Belgrade City Center: Historic "Old Town" locations are typically €400 for a studio, 1.5-room apartments are €500-600, and larger 2.0 or 3.0-room units are about €800.
-  Premier Belgrade Developments: In high-end districts such as Belgrade Waterfront or Belville, monthly rates are approx. €800 for studios, €1200 for 1.5-room units, and €1500 for 2.0 or 3.0-room apartments. However, there are luxory homes in these areas for €5000 and beyond. 
+  Premier Belgrade Developments: In high-end districts such as Belgrade Waterfront or Belville, monthly rates are approx. €800 for studios, €1200 for 1.5-room units, and €1500 for 2.0 or 3.0-room apartments. However, there are luxury homes in these areas for €5000 and beyond. 
   Novi Sad, the Serbian Athens, is Serbia’s most EU-aligned city, offering a premier cost-to-quality ratio with 1.5-room apartments starting at €400 per month, typically about €500 for a 2.0 apartment.  
 
  2. REAL ESTATE ACQUISITION
