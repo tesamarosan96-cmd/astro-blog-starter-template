@@ -28,12 +28,15 @@ Digital Setup: Documentation can be handled without your presence
 
 Operating Costs: The company formation process is only €149 for an entrepreneur or €199 for an LLC, and the virtual address is €400 euros a year or €35 per month!
 
-Housing: You must maintain a local address; rentals typically €300-€1500 per month. 
-Remote areas in Belgrade are about €250-550 for an apartment. 
-Old town location in the center of Belgrade is about €400 for a studio, €500 for a 1.5 room apartment, and €800 for a 2.0 or 3.0 room apartment. 
-High-end locations like Belgrade Waterfront or Belville are about €800 euros per month for a studio, €1200 for a 1.5 room apartment, and €1500 for a 2.0 or 3.0 room apartment with a garage.  
-Novi Sad, the Serbian Athens, is Serbia’s most EU-aligned city, offering a premier cost-to-quality ratio with 1.5-room apartments starting at €400 per month.
+*Housing*: To fulfill residency requirements, you must maintain a registered local address. Rental rates typically range from €300 to €1500 per month depending on the location and asset class.
 
+Belgrade Periphery: Apartments in suburban districts range from €250–€550.
+
+Belgrade City Center: Historic "Old Town" locations offer studios from €400, 1.5-room apartments from €500, and larger 2.0 or 3.0-room units from €800.
+
+Premier Belgrade Developments: In high-end districts such as Belgrade Waterfront or Belville, monthly rates begin at €800 for studios, €1200 for 1.5-room units, and €1500 for 2.0 or 3.0-room apartments, inclusive of garage facilities.
+
+Novi Sad, the ‘Serbian Athens,’ is Serbia’s most EU-aligned city, offering a premier cost-to-quality ratio with 1.5-room apartments starting at €400 per month.
  2. REAL ESTATE ACQUISITION
 
 Entry Point: There is no legal minimum, but prices start at €25,000 in rural areas (very old houses from little as €8.000) or €80,000 for apartments in major cities like Belgrade. The average price for a family house in a village is €70.000 or €180.000 for an apartment in Belgrade. 
