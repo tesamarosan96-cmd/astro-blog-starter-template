@@ -28,7 +28,7 @@ Digital Setup: Documentation can be handled without your presence
 
 Operating Costs: The company formation process is only €149 for an entrepreneur or €199 for an LLC, and the virtual address is €400 euros a year or €35 per month!
 
-HOUSING: To fulfill residency requirements, you should maintain a registered local address. Rental rates typically range from €300 to €1500 per month depending on the location.
+HOUSING: Rental rates typically range from €300 to €1500 per month depending on the location.
   Belgrade Periphery: Apartment retals are €250–€550.
   Belgrade City Center: Historic "Old Town" locations offer studios from €400, 1.5-room apartments from €500, and larger 2.0 or 3.0-room units from €800.
   Premier Belgrade Developments: In high-end districts such as Belgrade Waterfront or Belville, monthly rates begin at €800 for studios, €1200 for 1.5-room units, and €1500 for   2.0 or 3.0-room apartments, inclusive of garage facilities.
