@@ -32,7 +32,7 @@ Housing: You must maintain a local address; rentals typically €300-€1500 per
 Remote areas in Belgrade are about €250-550 for an apartment. 
 Old town location in the center of Belgrade is about €400 for a studio, €500 for a 1.5 room apartment, and €800 for a 2.0 or 3.0 room apartment. 
 High-end locations like Belgrade Waterfront or Belville are about €800 euros per month for a studio, €1200 for a 1.5 room apartment, and €1500 for a 2.0 or 3.0 room apartment with a garage.  
-Novi Sad, as the second largest and most European city provides housing for a resonable price, a 1.5 room apartment can be found from €400 a month. 
+Novi Sad, as the second largest and most European city provides housing for a reasonable price, a 1.5 room apartment can be found from €400 a month. 
 
  2. REAL ESTATE ACQUISITION
 
