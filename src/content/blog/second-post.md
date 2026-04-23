@@ -36,7 +36,7 @@ HOUSING: Rental rates typically range from €300 to €1500 per month depending
 
  2. REAL ESTATE ACQUISITION
 
-Entry Point: There is no legal minimum, but prices start at €25,000 in rural areas (very old houses from little as €8.000) or €80,000 for apartments in major cities like Belgrade. The average price for a family house in a village is €70.000 or €180.000 for an apartment in Belgrade. 
+Entry Point: There is no legal minimum, but prices start at €25,000 in rural areas (very old houses from little as €8.000) or €80,000 for apartments in major cities like Belgrade. The average price for a family house in a village is €70.000 or €180.000 for an apartment in Belgrade. However, there are always homes for refined taste and they have a rate of about €4,500 per square m.
 
 Location: You can buy property anywhere in the country.
 
