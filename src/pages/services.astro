@@ -1,54 +1,76 @@
 ---
-layout: default
-title: Services
-permalink: /services/
+import Layout from '../layouts/Layout.astro';
 ---
 
-<div class="page-content">
-  <h1>My Services</h1>
-  <p>Here are the services I offer:</p>
-  
-  <div class="services-grid">
-    <div class="service-item">
-      <h3>Consulting</h3>
-      <p>Professional consulting services for your business needs. I provide expert advice and solutions tailored to your specific requirements.</p>
-      <p><strong>Pricing:</strong> Starting at $100/hour</p>
-    </div>
-    
-    <div class="service-item">
-      <h3>Web Development</h3>
-      <p>Custom website development using modern technologies. From simple static sites to complex web applications.</p>
-      <p><strong>Pricing:</strong> Starting at $500/project</p>
-    </div>
-    
-    <div class="service-item">
-      <h3>Content Creation</h3>
-      <p>High-quality blog posts, articles, and website content. SEO optimized and engaging for your target audience.</p>
-      <p><strong>Pricing:</strong> Starting at $50/article</p>
-    </div>
-  </div>
-  
-  <div class="contact-section">
-    <h2>Interested in working together?</h2>
-    <p>Contact me at your-email@example.com or use the contact form below.</p>
-    
-    <form action="/contact" method="post">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+<Layout title="Our Services">
+  <main>
+    <section class="services-section">
+      <h1>Our Services</h1>
+      <p>We offer a range of professional services tailored to meet your needs.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h2>Web Design</h2>
+          <p>Custom, responsive websites built for modern browsers and devices.</p>
+        </div>
+        <div class="service-card">
+          <h2>SEO Optimization</h2>
+          <p>Improve your visibility on search engines with our proven strategies.</p>
+        </div>
+        <div class="service-card">
+          <h2>Content Creation</h2>
+          <p>Engaging copy, blogs, and multimedia content to grow your audience.</p>
+        </div>
+        <div class="service-card">
+          <h2>Consulting</h2>
+          <p>One-on-one guidance to help you achieve your digital goals.</p>
+        </div>
       </div>
-      
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-</div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .services-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .services-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .service-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .service-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+</style>
