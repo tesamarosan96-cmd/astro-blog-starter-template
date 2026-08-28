@@ -8,67 +8,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - WelcomeToSerbia Shop</title>
     <style>
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        background-color: #f9f9f9;
+      /* Import your Serbia Sans font - CORRECTED PATH */
+      @font-face {
+        font-family: 'Serbia Sans';
+        src: url('/font/Srbija-sans.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
       }
+
+      body {
+        font-family: 'Serbia Sans', sans-serif; /* Use your font */
+        margin: 0;
+        background-color: #f0f4f8; /* Light blue background */
+        color: #333;
+      }
+
       header {
-        background: white;
+        background: #0056b3; /* Darker blue */
         padding: 1em 2em;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
+      .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
       .internal-links {
         display: flex;
         gap: 1em;
       }
+
       .internal-links a {
         text-decoration: none;
-        color: #333;
-        padding: 0.5em;
-        border-bottom: 2px solid transparent;
+        color: #e0e7ff; /* Light blue/white for links */
+        padding: 0.5em 1em;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
+
       .internal-links a:hover {
-        border-bottom-color: #0070f3;
+        background-color: #ffffff;
+        color: #0056b3;
       }
+
       .services-section {
         padding: 60px 20px;
         text-align: center;
         max-width: 1200px;
         margin: 0 auto;
       }
+
+      .services-section h1 {
+        font-size: 2.8rem;
+        color: #0056b3; /* Blue title */
+        margin-bottom: 10px;
+      }
+
+      .services-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
-        margin-top: 40px;
+        margin-top: 20px;
       }
+
       .service-card {
-        background: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 86, 179, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: left;
         display: flex;
         flex-direction: column;
         height: 100%;
+        border-top: 5px solid #007bff; /* Blue accent bar */
       }
+
       .service-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 86, 179, 0.15);
       }
+
       .service-card h2 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 10px;
+        font-size: 1.6rem;
+        color: #0056b3;
+        margin-bottom: 15px;
+        font-weight: 600;
       }
+
       .service-card p {
-        color: #666;
+        color: #555;
         line-height: 1.6;
         flex-grow: 1;
+        margin: 0;
       }
     </style>
 </head>
@@ -130,8 +173,6 @@
                     <h2>Buying Property</h2>
                     <p>Support for purchasing property in Serbia, including Power of Attorney (POA) services.</p>
                 </div>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+
+                <!-- Service 8 (NEW) -->
+                <div class="service
