@@ -1,76 +1,108 @@
 ---
-import Layout from '../layouts/Layout.astro';
+// This is a simple page without a separate layout file
 ---
 
-<Layout title="Our Services">
-  <main>
-    <section class="services-section">
-      <h1>Our Services</h1>
-      <p>We offer a range of professional services tailored to meet your needs.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - WelcomeToSerbia Shop</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background-color: #f9f9f9;
+      }
+      header {
+        background: white;
+        padding: 1em 2em;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .internal-links {
+        display: flex;
+        gap: 1em;
+      }
+      .internal-links a {
+        text-decoration: none;
+        color: #333;
+        padding: 0.5em;
+        border-bottom: 2px solid transparent;
+      }
+      .internal-links a:hover {
+        border-bottom-color: #0070f3;
+      }
+      .services-section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .service-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">WelcomeToSerbia Shop</div>
+        <nav class="internal-links">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+        </nav>
+    </header>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h2>Web Design</h2>
-          <p>Custom, responsive websites built for modern browsers and devices.</p>
-        </div>
-        <div class="service-card">
-          <h2>SEO Optimization</h2>
-          <p>Improve your visibility on search engines with our proven strategies.</p>
-        </div>
-        <div class="service-card">
-          <h2>Content Creation</h2>
-          <p>Engaging copy, blogs, and multimedia content to grow your audience.</p>
-        </div>
-        <div class="service-card">
-          <h2>Consulting</h2>
-          <p>One-on-one guidance to help you achieve your digital goals.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
-
-<style>
-  .services-section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .services-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .service-card {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
-
-  .service-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .service-card p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-  }
-</style>
+    <main>
+        <section class="services-section">
+            <h1>Our Services</h1>
+            <p>We offer a range of professional services tailored to meet your needs.</p>
+    
+            <div class="services-grid">
+                <div class="service-card">
+                    <h2>Web Design</h2>
+                    <p>Custom, responsive websites built for modern browsers and devices.</p>
+                </div>
+                <div class="service-card">
+                    <h2>SEO Optimization</h2>
+                    <p>Improve your visibility on search engines with our proven strategies.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Content Creation</h2>
+                    <p>Engaging copy, blogs, and multimedia content to grow your audience.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Consulting</h2>
+                    <p>One-on-one guidance to help you achieve your digital goals.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
