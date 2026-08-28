@@ -1,76 +1,152 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+// This is the main layout for your entire site
+// It includes the header with navigation and the footer.
 ---
 
+// Import your font and define global styles
+<style is:global>
+  /* Import your Serbia Sans font - adjust the filename if needed */
+  @font-face {
+    font-family: 'Serbia Sans';
+    src: url('/font/Srbija-sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Apply the font and base styles to everything */
+  html, body {
+    font-family: 'Serbia Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light blue background */
+    color: #333;
+  }
+
+  /* Main content area styling */
+  main {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  /* Base styles for headings and paragraphs */
+  h1, h2, h3, h4, h5, h6 {
+    color: #0056b3; /* Blue titles */
+  }
+
+  p, li {
+    color: #555;
+    line-height: 1.7;
+  }
+
+  /* Base styles for links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Header with new blue theme -->
 <header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-            <HeaderLink href="/services">Services</HeaderLink>
-		</div>
-		<div class="social-links">
-			<a href="https://www.instagram.com/residencyinserbia/" target="_blank">
-    <span class="sr-only">Follow WTSS on Instagram</span>
-    <img src="/INSTACIRCLE.png" alt="Instagram" width="24" height: auto />
-</a>
-			<a href="https://x.com/welcometos53932" target="_blank">
-				<span class="sr-only">Follow Welcome To Serbia Store on X </span>
-				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-					><path
-						fill="currentColor"
-						d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-					></path></svg
-				>
-			</a>
-			<a href="https://www.facebook.com/profile.php?id=61585637589638" target="_blank">
-    <span class="sr-only">Go to WTSS on FB</span>
-    <img src="/FBBLACK.webp" alt="Facebook" width="24" style="height: auto;" />
-</a>
-		</div>
-	</nav>
+		<div class="logo">WelcomeToSerbia Shop</div>
+		<nav>
+			<div class="internal-links">
+				<a href="/">Home</a>
+				<a href="/blog">Blog</a>
+				<a href="/about">About</a>
+				<a href="/services">Services</a>
+			</div>
+			<div class="social-links">
+				<a href="https://www.instagram.com/residencyinserbia/" target="_blank">
+					<span class="sr-only">Follow WTSS on Instagram</span>
+					<img src="/INSTACIRCLE.png" alt="Instagram" width="24" style="height: auto;" />
+				</a>
+				<a href="https://x.com/welcometos53932" target="_blank">
+					<span class="sr-only">Follow Welcome To Serbia Store on X </span>
+					<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
+						><path
+							fill="currentColor"
+							d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+						></path></svg
+					>
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=61585637589638" target="_blank">
+					<span class="sr-only">Go to WTSS on FB</span>
+					<img src="/FBBLACK.webp" alt="Facebook" width="24" style="height: auto;" />
+				</a>
+			</div>
+		</nav>
 </header>
+
+<!-- This is where the content from your other pages (like blog posts) will be inserted -->
+<slot />
+
+<!-- Footer -->
+<footer style="text-align: center; padding: 40px; background: #0056b3; color: white; margin-top: 40px;">
+  <p>&copy; 2026 WelcomeToSerbia Shop. All rights reserved.</p>
+</footer>
+
+<!-- Specific styles for the header and navigation -->
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
+		padding: 1em 2em;
+		background: #0056b3;
+		box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	h2 a,
-	h2 a.active {
+	.logo {
+		color: white;
+		font-size: 1.5rem;
+		font-weight: bold;
 		text-decoration: none;
 	}
+
 	nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		gap: 2em;
 	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
+
+	.internal-links {
 		display: flex;
+		gap: 1em;
 	}
+
+	.internal-links a {
+		text-decoration: none;
+		color: #e0e7ff; /* Light blue/white for links */
+		padding: 0.5em 1em;
+		border-radius: 6px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.internal-links a:hover {
+		background-color: #ffffff;
+		color: #0056b3;
+	}
+
+	.social-links a {
+		color: white;
+	}
+
+	.social-links a:hover {
+		opacity: 0.8;
+	}
+
+	/* Hide social links on small screens */
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav {
+			gap: 1em;
 		}
 	}
 </style>
