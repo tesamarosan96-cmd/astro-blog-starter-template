@@ -42,7 +42,7 @@
       }
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
         margin-top: 40px;
       }
@@ -52,19 +52,23 @@
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         transition: transform 0.3s ease;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
       .service-card:hover {
         transform: translateY(-5px);
       }
-      h1 {
-        font-size: 2.5rem;
-      }
-      h2 {
+      .service-card h2 {
         font-size: 1.5rem;
         color: #333;
+        margin-bottom: 10px;
       }
-      p {
+      .service-card p {
         color: #666;
+        line-height: 1.6;
+        flex-grow: 1;
       }
     </style>
 </head>
@@ -83,23 +87,48 @@
         <section class="services-section">
             <h1>Our Services</h1>
             <p>We offer a range of professional services tailored to meet your needs.</p>
-    
+
             <div class="services-grid">
+                <!-- Service 1 -->
                 <div class="service-card">
-                    <h2>Web Design</h2>
-                    <p>Custom, responsive websites built for modern browsers and devices.</p>
+                    <h2>Opening a Legal Entity</h2>
+                    <p>Help with registering your business as an Entrepreneur or LLC in Serbia.</p>
                 </div>
+
+                <!-- Service 2 -->
                 <div class="service-card">
-                    <h2>SEO Optimization</h2>
-                    <p>Improve your visibility on search engines with our proven strategies.</p>
+                    <h2>Opening a Bank Account</h2>
+                    <p>Assistance with opening a business or personal bank account in Serbia.</p>
                 </div>
+
+                <!-- Service 3 -->
                 <div class="service-card">
-                    <h2>Content Creation</h2>
-                    <p>Engaging copy, blogs, and multimedia content to grow your audience.</p>
+                    <h2>Visa Application</h2>
+                    <p>Guidance and support for your Serbian visa application process.</p>
                 </div>
+
+                <!-- Service 4 -->
                 <div class="service-card">
-                    <h2>Consulting</h2>
-                    <p>One-on-one guidance to help you achieve your digital goals.</p>
+                    <h2>Virtual Address</h2>
+                    <p>Provision of a virtual address for your company registration needs.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <h2>Temporary Residence</h2>
+                    <p>Complete application support for temporary residence permits.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <h2>Permanent Residence</h2>
+                    <p>Expert assistance with applying for permanent residence in Serbia.</p>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <h2>Buying Property</h2>
+                    <p>Support for purchasing property in Serbia, including Power of Attorney (POA) services.</p>
                 </div>
             </div>
         </section>
