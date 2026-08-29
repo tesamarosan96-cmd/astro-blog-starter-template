@@ -1,1 +1,88 @@
+---
+const productName = "Welcome To Serbia Shop";
+const price = "29.00";
+---
 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{productName}</title>
+
+  <!-- PayPal JavaScript SDK -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"
+  ></script>
+</head>
+
+<body>
+
+  <main>
+    <h1>{productName}</h1>
+
+    <p>Price: €{price}</p>
+
+    <!-- PayPal button will appear here -->
+    <div id="paypal-button-container"></div>
+
+    <p id="paypal-result"></p>
+  </main>
+
+  <script>
+    // @ts-ignore
+    paypal.Buttons({
+      style: {
+        layout: "vertical",
+        shape: "rect",
+        label: "paypal"
+      },
+
+      createOrder() {
+        return fetch("/api/paypal/create-order", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            product: "welcome-to-serbia-shop"
+          })
+        })
+        .then((response) => response.json())
+        .then((order) => order.id);
+      },
+
+      onApprove(data) {
+        return fetch("/api/paypal/capture-order", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            orderID: data.orderID
+          })
+        })
+        .then((response) => response.json())
+        .then((details) => {
+          document.getElementById("paypal-result").textContent =
+            "Payment successful! Thank you for your order.";
+        });
+      },
+
+      onCancel() {
+        document.getElementById("paypal-result").textContent =
+          "Payment cancelled.";
+      },
+
+      onError(error) {
+        console.error("PayPal error:", error);
+
+        document.getElementById("paypal-result").textContent =
+          "There was a problem processing the payment.";
+      }
+
+    }).render("#paypal-button-container");
+  </script>
+
+</body>
+</html>
