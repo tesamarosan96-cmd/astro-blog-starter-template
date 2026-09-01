@@ -1,178 +1,339 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - WelcomeToSerbia Shop</title>
+    <BaseHead
+        title={`Our Services | ${SITE_TITLE}`}
+        description="Professional services for entrepreneurs, businesses and individuals in Serbia."
+    />
+
     <style>
-      /* Import your Serbia Sans font - CORRECTED PATH */
-      @font-face {
-        font-family: 'Serbia Sans';
-        src: url('/font/Srbija-sans.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-      }
+        @font-face {
+            font-family: 'Serbia Sans';
+            src: url('/font/Srbija-sans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-      body {
-        font-family: 'Serbia Sans', sans-serif; /* Use your font */
-        margin: 0;
-        background-color: #f0f4f8; /* Light blue background */
-        color: #333;
-      }
+        /*
+         * SERVICES PAGE
+         */
 
-      header {
-        background: #0056b3; /* Darker blue */
-        padding: 1em 2em;
-        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        main {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-      .logo {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
+        .services-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+            box-sizing: border-box;
+            text-align: center;
+        }
 
-      .internal-links {
-        display: flex;
-        gap: 1em;
-      }
+        .services-section h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: #0056b3;
+            margin: 0 0 12px;
+            font-weight: 700;
+        }
 
-      .internal-links a {
-        text-decoration: none;
-        color: #e0e7ff; /* Light blue/white for links */
-        padding: 0.5em 1em;
-        border-radius: 6px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
+        .services-intro {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin: 0 auto 40px;
+            max-width: 800px;
+        }
 
-      .internal-links a:hover {
-        background-color: #ffffff;
-        color: #0056b3;
-      }
+        /*
+         * SERVICES GRID
+         */
 
-      .services-section {
-        padding: 60px 20px;
-        text-align: center;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+            align-items: stretch;
+        }
 
-      .services-section h1 {
-        font-size: 2.8rem;
-        color: #0056b3; /* Blue title */
-        margin-bottom: 10px;
-      }
+        /*
+         * SERVICE CARD
+         */
 
-      .services-section p {
-        font-size: 1.1rem;
-        color: #555;
-        margin-bottom: 40px;
-      }
+        .service-card {
+            background: #ffffff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.08);
+            border-top: 5px solid #007bff;
+            text-align: left;
 
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 20px;
-      }
+            display: flex;
+            flex-direction: column;
 
-      .service-card {
-        background: #ffffff;
-        padding: 40px 30px;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(0, 86, 179, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        border-top: 5px solid #007bff; /* Blue accent bar */
-      }
+            min-height: 190px;
+            box-sizing: border-box;
 
-      .service-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 30px rgba(0, 86, 179, 0.15);
-      }
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
 
-      .service-card h2 {
-        font-size: 1.6rem;
-        color: #0056b3;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 86, 179, 0.15);
+        }
 
-      .service-card p {
-        color: #555;
-        line-height: 1.6;
-        flex-grow: 1;
-        margin: 0;
-      }
+        .service-card h2 {
+            font-size: 1.55rem;
+            line-height: 1.3;
+            color: #0056b3;
+            margin: 0 0 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /*
+         * OPTIONAL SERVICE BUTTON
+         *
+         * You can use this later if you want each service
+         * to have a "Learn More" or "Contact Us" button.
+         */
+
+        .service-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0056b3;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .service-link:hover {
+            text-decoration: underline;
+        }
+
+        /*
+         * TABLET
+         */
+
+        @media (max-width: 1000px) {
+            .services-section {
+                padding: 50px 20px 70px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 25px;
+            }
+        }
+
+        /*
+         * PHONE
+         */
+
+        @media (max-width: 700px) {
+            .services-section {
+                padding: 40px 15px 60px;
+            }
+
+            .services-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .services-intro {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 30px 25px;
+                min-height: auto;
+            }
+
+            .service-card h2 {
+                font-size: 1.4rem;
+            }
+
+            .service-card p {
+                font-size: 1rem;
+            }
+        }
+
+        /*
+         * SMALL PHONES
+         */
+
+        @media (max-width: 400px) {
+            .services-section {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .services-section h1 {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 25px 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="logo">WelcomeToSerbia Shop</div>
-        <nav class="internal-links">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-        </nav>
-    </header>
+
+    <!--
+        This uses the SAME header as the original Astro template.
+        Do not create another header here.
+    -->
+    <Header />
 
     <main>
+
         <section class="services-section">
+
             <h1>Our Services</h1>
-            <p>We offer a range of professional services tailored to meet your needs.</p>
+
+            <p class="services-intro">
+                We offer a range of professional services tailored to meet your needs.
+            </p>
 
             <div class="services-grid">
-                <!-- Service 1 -->
+
+                <!-- SERVICE 1 -->
                 <div class="service-card">
                     <h2>Opening a Legal Entity</h2>
-                    <p>Help with registering your business as an Entrepreneur or LLC in Serbia.</p>
+
+                    <p>
+                        Help with registering your business as an Entrepreneur
+                        or LLC in Serbia.
+                    </p>
                 </div>
 
-                <!-- Service 2 -->
+
+                <!-- SERVICE 2 -->
                 <div class="service-card">
                     <h2>Opening a Bank Account</h2>
-                    <p>Assistance with opening a business or personal bank account in Serbia.</p>
+
+                    <p>
+                        Assistance with opening a business or personal bank
+                        account in Serbia.
+                    </p>
                 </div>
 
-                <!-- Service 3 -->
+
+                <!-- SERVICE 3 -->
                 <div class="service-card">
                     <h2>Visa Application</h2>
-                    <p>Guidance and support for your Serbian visa application process.</p>
+
+                    <p>
+                        Guidance and support for your Serbian visa application process.
+                    </p>
                 </div>
 
-                <!-- Service 4 -->
+
+                <!-- SERVICE 4 -->
                 <div class="service-card">
                     <h2>Virtual Address</h2>
-                    <p>Provision of a virtual address for your company registration needs.</p>
+
+                    <p>
+                        Provision of a virtual address for your company registration
+                        needs.
+                    </p>
                 </div>
 
-                <!-- Service 5 -->
+
+                <!-- SERVICE 5 -->
                 <div class="service-card">
                     <h2>Temporary Residence</h2>
-                    <p>Complete application support for temporary residence permits.</p>
+
+                    <p>
+                        Complete application support for temporary residence permits.
+                    </p>
                 </div>
 
-                <!-- Service 6 -->
+
+                <!-- SERVICE 6 -->
                 <div class="service-card">
                     <h2>Permanent Residence</h2>
-                    <p>Expert assistance with applying for permanent residence in Serbia.</p>
+
+                    <p>
+                        Expert assistance with applying for permanent residence
+                        in Serbia.
+                    </p>
                 </div>
 
-                <!-- Service 7 -->
+
+                <!-- SERVICE 7 -->
                 <div class="service-card">
                     <h2>Buying Property</h2>
-                    <p>Support for purchasing property in Serbia, including Power of Attorney (POA) services.</p>
+
+                    <p>
+                        Support for purchasing property in Serbia, including
+                        Power of Attorney (POA) services.
+                    </p>
                 </div>
 
-                <!-- Service 8 (NEW) -->
-                <div class="service
+
+                <!--
+                    SERVICE 8
+
+                    Your original code was cut off in the message at:
+
+                    <!-- Service 8 (NEW) -->
+                    <div class="service...
+
+                    So I have intentionally NOT invented the text for this
+                    service.
+
+                    Replace this card with the exact Service 8 from your
+                    original services.astro file.
+                -->
+
+                <!-- SERVICE 8 -->
+                <div class="service-card">
+                    <h2>Consultations</h2>
+
+                    <p>
+                        Consultations about business formation, best tax option, choosing the bank in Serbia for your needs, visa and residency application consultations and other related topics.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--
+        This uses the SAME footer as the original Astro template.
+    -->
+    <Footer />
+
+</body>
+
+</html>
