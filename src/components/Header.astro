@@ -1,102 +1,93 @@
 ---
 /*
- * WelcomeToSerbia Shop
- * Responsive Header
- *
- * Includes:
- * - Logo
- * - Desktop navigation
- * - Mobile hamburger menu
- * - Google Translate
- * - Instagram
- * - X
- * - Facebook
- */
+ * WelcomeToSerbia Shop - Main Header
+ * Responsive desktop + mobile navigation
+ * Google Translate: English / Russian
+---
 ---
 
 <style is:global>
-
   /* =========================================================
-     FONT
+     GOOGLE TRANSLATE - GENERAL FIXES
      ========================================================= */
 
-  @font-face {
-    font-family: 'Serbia Sans';
-
-    src:
-      url('/font/Srbija-sans.woff') format('woff'),
-      url('/fonts/Srbija-sans.woff') format('woff');
-
-    font-weight: normal;
-    font-style: normal;
-
-    font-display: swap;
-  }
-
-
-  /* =========================================================
-     GENERAL
-     ========================================================= */
-
-  html,
+  /* Prevent Google's translation banner from pushing the page down */
   body {
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
-
-    overflow-x: hidden;
-
-    font-family: 'Serbia Sans', sans-serif;
+    top: 0 !important;
   }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+  .goog-te-banner-frame {
+    display: none !important;
   }
 
+  .goog-te-gadget {
+    font-family: Arial, sans-serif !important;
+  }
+
+  .goog-te-gadget span {
+    display: none !important;
+  }
+
+  /* The actual Google language dropdown */
+  #google_translate_element .goog-te-combo {
+    width: 150px;
+    height: 34px;
+
+    padding: 4px 8px;
+
+    border: 1px solid #d6dce5;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+    outline: none;
+  }
+
+  #google_translate_element .goog-te-combo:hover {
+    border-color: #0056b3;
+  }
+
+  #google_translate_element .goog-te-combo:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.15);
+  }
 
   /* =========================================================
      HEADER
      ========================================================= */
 
-  header {
+  .site-header {
     width: 100%;
+    box-sizing: border-box;
 
     background: #0056b3;
-
-    padding: 10px 24px;
 
     box-shadow:
       0 4px 12px rgba(0, 86, 179, 0.20);
 
     position: relative;
-
     z-index: 1000;
   }
 
-
-  /* =========================================================
-     HEADER INNER
-     ========================================================= */
-
   .header-inner {
     width: 100%;
+    min-height: 70px;
 
-    max-width: 1400px;
+    padding: 8px 24px;
 
-    margin: 0 auto;
+    box-sizing: border-box;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 20px;
   }
-
 
   /* =========================================================
      LOGO
@@ -104,18 +95,13 @@
 
   .logo {
     display: flex;
-
     align-items: center;
 
     gap: 10px;
 
-    color: white;
-
-    text-decoration: none;
-
     flex-shrink: 0;
 
-    min-width: 0;
+    text-decoration: none;
   }
 
   .logo:hover {
@@ -123,670 +109,443 @@
   }
 
   .logo img {
-    width: 62px;
-
-    height: 62px;
+    width: 58px;
+    height: 58px;
 
     object-fit: contain;
 
     display: block;
 
-    flex-shrink: 0;
+    border-radius: 0;
   }
 
   .logo-text {
     display: flex;
-
     flex-direction: column;
 
     justify-content: center;
 
-    color: white;
+    line-height: 1.05;
+
+    color: #ffffff;
 
     font-size: 15px;
-
-    font-weight: bold;
-
-    line-height: 1.15;
+    font-weight: 700;
 
     white-space: nowrap;
   }
 
   .logo-text span {
     display: block;
+    color: #ffffff;
   }
-
-
-  /* =========================================================
-     DESKTOP RIGHT SIDE
-     ========================================================= */
-
-  .header-right {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-end;
-
-    gap: 15px;
-
-    min-width: 0;
-  }
-
 
   /* =========================================================
      NAVIGATION
      ========================================================= */
 
-  nav {
+  .main-navigation {
     display: flex;
-
     align-items: center;
+    justify-content: flex-end;
+
+    gap: 18px;
+
+    flex: 1;
   }
 
   .internal-links {
     display: flex;
-
     align-items: center;
 
-    gap: 4px;
-
-    flex-wrap: nowrap;
+    gap: 6px;
   }
 
   .internal-links a {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .internal-links a:hover {
+    background-color: #ffffff;
+    color: #0056b3;
+    text-decoration: none;
+  }
+
+  /* =========================================================
+     TRANSLATION
+     ========================================================= */
+
+  .translation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding: 5px 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    min-height: 36px;
+
+    box-sizing: border-box;
+  }
+
+  .translation-label {
+    display: flex;
     align-items: center;
 
+    gap: 5px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+  }
+
+  .translation-icon {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  #google_translate_element {
+    display: flex;
+    align-items: center;
     justify-content: center;
+
+    min-height: 34px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  /* =========================================================
+     SOCIAL ICONS
+     ========================================================= */
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    height: 36px;
+  }
+
+  .social-links a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
 
     color: #ffffff;
 
     text-decoration: none;
 
-    padding: 8px 11px;
+    line-height: 0;
 
-    border-radius: 6px;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
+    border-radius: 50%;
 
     transition:
-      background-color 0.25s ease,
-      color 0.25s ease;
-  }
-
-  .internal-links a:hover {
-    background-color: #ffffff;
-
-    color: #0056b3;
-
-    text-decoration: none;
-  }
-
-
-  /* =========================================================
-     LANGUAGE CONTROL
-     
-     IMPORTANT:
-     There is NO white box around the language control.
-     ========================================================= */
-
-  .translate-control {
-    display: flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    color: white;
-
-    white-space: nowrap;
-
-    flex-shrink: 0;
-  }
-
-  .translate-label {
-    color: white;
-
-    font-family: 'Serbia Sans', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-  }
-
-
-  /* Google Translate itself */
-
-  #google_translate_element {
-    display: inline-flex;
-
-    align-items: center;
-
-    background: transparent;
-
-    border: none;
-
-    padding: 0;
-
-    margin: 0;
-
-    min-height: 30px;
-  }
-
-  #google_translate_element .goog-te-gadget {
-    font-family: Arial, sans-serif !important;
-
-    font-size: 0 !important;
-
-    line-height: 1 !important;
-
-    color: white !important;
-  }
-
-  #google_translate_element .goog-te-gadget select {
-    font-family: Arial, sans-serif !important;
-
-    font-size: 13px !important;
-
-    color: #ffffff !important;
-
-    background: transparent !important;
-
-    border: none !important;
-
-    border-radius: 4px;
-
-    padding: 4px 3px;
-
-    min-width: 82px;
-
-    height: 30px;
-
-    cursor: pointer;
-
-    outline: none;
-  }
-
-  #google_translate_element .goog-te-gadget select option {
-    color: #333333;
-
-    background: #ffffff;
-  }
-
-  #google_translate_element .goog-te-gadget select:hover {
-    background: rgba(255, 255, 255, 0.12) !important;
-  }
-
-  #google_translate_element .goog-te-gadget > span {
-    display: none !important;
-  }
-
-
-  /* =========================================================
-     GOOGLE TRANSLATE BANNER
-     ========================================================= */
-
-  .goog-te-banner-frame {
-    display: none !important;
-  }
-
-  body {
-    top: 0 !important;
-  }
-
-  .goog-te-balloon-frame {
-    display: none !important;
-  }
-
-
-  /* =========================================================
-     SOCIAL LINKS
-     ========================================================= */
-
-  .social-links {
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    flex-shrink: 0;
-  }
-
-  .social-links a {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 32px;
-
-    height: 32px;
-
-    color: white;
-
-    text-decoration: none;
-
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease;
+      opacity 0.2s ease,
+      transform 0.2s ease;
   }
 
   .social-links a:hover {
     opacity: 0.8;
-
-    transform: scale(1.08);
-
+    transform: translateY(-1px);
     text-decoration: none;
   }
 
   .social-links img {
-    width: 24px;
+    display: block;
 
+    width: 24px;
     height: 24px;
 
     object-fit: contain;
+
+    margin: 0;
 
     border-radius: 0;
   }
 
   .social-links svg {
-    width: 26px;
-
-    height: 26px;
-
     display: block;
-  }
 
+    width: 24px;
+    height: 24px;
+
+    margin: 0;
+  }
 
   /* =========================================================
      MOBILE MENU BUTTON
      ========================================================= */
 
-  .mobile-menu-button {
+  .menu-toggle {
     display: none;
 
-    align-items: center;
+    width: 42px;
+    height: 42px;
 
-    justify-content: center;
+    padding: 8px;
 
-    flex-shrink: 0;
-
-    width: 44px;
-
-    height: 40px;
-
-    padding: 0;
-
-    border: 1px solid rgba(255, 255, 255, 0.55);
-
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 7px;
 
-    background: rgba(255, 255, 255, 0.08);
-
-    color: white;
-
-    font-size: 23px;
-
-    line-height: 1;
+    background: transparent;
 
     cursor: pointer;
+
+    flex-shrink: 0;
   }
 
-  .mobile-menu-button:hover {
-    background: white;
-
-    color: #0056b3;
-  }
-
-
-  /* =========================================================
-     MOBILE MENU
-     ========================================================= */
-
-  .mobile-menu {
-    display: none;
-
-    width: 100%;
-
-    max-width: 1400px;
-
-    margin: 10px auto 0;
-
-    padding: 12px 0 4px;
-
-    border-top:
-      1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  .mobile-menu.open {
+  .menu-toggle span {
     display: block;
-  }
 
-  .mobile-menu .internal-links {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    width: 100%;
-
-    gap: 3px;
-  }
-
-  .mobile-menu .internal-links a {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    width: 100%;
-
-    padding: 10px 8px;
-
-    color: white;
-
-    font-size: 16px;
-
-    border-radius: 6px;
-  }
-
-  .mobile-menu .internal-links a:hover {
-    background: white;
-
-    color: #0056b3;
-  }
-
-
-  /* =========================================================
-     MOBILE LANGUAGE
-     ========================================================= */
-
-  .mobile-translate {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    width: 100%;
-
-    margin-top: 10px;
-
-    padding: 11px 8px;
-
-    border-top:
-      1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  .mobile-translate .translate-control {
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    gap: 8px;
-  }
-
-  .mobile-translate .translate-label {
-    font-size: 15px;
-  }
-
-  .mobile-translate #google_translate_element {
-    display: inline-flex;
-
-    align-items: center;
-  }
-
-  .mobile-translate
-  #google_translate_element
-  .goog-te-gadget
-  select {
-    min-width: 100px;
-
-    height: 32px;
-
-    padding: 4px;
-
-    font-size: 14px !important;
-
-    color: white !important;
-
-    background: transparent !important;
-  }
-
-
-  /* =========================================================
-     MOBILE SOCIAL LINKS
-     ========================================================= */
-
-  .mobile-social {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-top: 10px;
-
-    padding: 11px 8px 4px;
-
-    border-top:
-      1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  .mobile-social a {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 32px;
-
-    height: 32px;
-
-    color: white;
-
-    text-decoration: none;
-  }
-
-  .mobile-social img {
     width: 24px;
+    height: 2px;
 
-    height: 24px;
+    margin: 5px auto;
 
-    object-fit: contain;
+    background: #ffffff;
 
-    border-radius: 0;
+    border-radius: 2px;
+
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
-  .mobile-social svg {
-    width: 26px;
-
-    height: 26px;
+  .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
-
 
   /* =========================================================
-     TABLET
+     FOOTER
      ========================================================= */
 
-  @media (max-width: 1100px) {
+  .site-footer {
+    width: 100%;
 
-    header {
-      padding:
-        9px 16px;
-    }
+    box-sizing: border-box;
+
+    margin-top: 40px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+  }
+
+  .site-footer p {
+    margin: 0;
+
+    color: #56565d;
+
+    font-size: 18px;
+  }
+
+  /* =========================================================
+     MOBILE / TABLET
+     ========================================================= */
+
+  @media (max-width: 900px) {
 
     .header-inner {
+      min-height: 64px;
+
+      padding: 7px 14px;
+
       gap: 10px;
     }
 
-    .logo {
-      gap: 8px;
-    }
-
     .logo img {
-      width: 55px;
-
-      height: 55px;
-    }
-
-    .logo-text {
-      font-size: 14px;
-    }
-
-    .header-right {
-      gap: 7px;
-    }
-
-    .internal-links {
-      gap: 1px;
-    }
-
-    .internal-links a {
-      padding:
-        7px 7px;
-
-      font-size: 14px;
-    }
-
-    .social-links {
-      display: none;
-    }
-
-    .translate-label {
-      display: none;
-    }
-  }
-
-
-  /* =========================================================
-     MOBILE
-     ========================================================= */
-
-  @media (max-width: 720px) {
-
-    header {
-      padding:
-        9px 12px;
-    }
-
-    .header-inner {
-      width: 100%;
-
-      gap: 8px;
-    }
-
-    .logo {
-      max-width:
-        calc(100% - 55px);
-
-      gap: 8px;
-    }
-
-    .logo img {
-      width: 48px;
-
-      height: 48px;
+      width: 50px;
+      height: 50px;
     }
 
     .logo-text {
       font-size: 13px;
-
-      line-height: 1.15;
-
-      white-space: normal;
     }
 
-
-    /* Hide desktop navigation */
-
-    .header-right {
-      display: none;
-    }
-
-
-    /* Show hamburger */
-
-    .mobile-menu-button {
-      display: inline-flex;
-    }
-
-
-    /* Mobile menu */
-
-    .mobile-menu {
-      display: none;
-    }
-
-    .mobile-menu.open {
+    .menu-toggle {
       display: block;
     }
 
+    .main-navigation {
+      display: none;
 
-    /* Mobile language */
+      position: absolute;
 
-    .mobile-translate {
+      top: 100%;
+      left: 0;
+      right: 0;
+
+      width: 100%;
+
+      padding: 14px;
+
+      box-sizing: border-box;
+
+      background: #0056b3;
+
+      box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.15);
+
+      flex-direction: column;
+
+      align-items: stretch;
+      justify-content: flex-start;
+
+      gap: 12px;
+    }
+
+    .main-navigation.menu-open {
       display: flex;
     }
-  }
 
+    .internal-links {
+      display: flex;
+
+      flex-direction: column;
+
+      width: 100%;
+
+      gap: 4px;
+    }
+
+    .internal-links a {
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 11px 14px;
+
+      justify-content: flex-start;
+
+      font-size: 17px;
+
+      border-radius: 6px;
+    }
+
+    .translation-wrapper {
+      width: 100%;
+
+      justify-content: space-between;
+
+      padding: 9px 10px;
+
+      box-sizing: border-box;
+    }
+
+    .translation-label {
+      font-size: 16px;
+    }
+
+    #google_translate_element {
+      margin-left: auto;
+    }
+
+    #google_translate_element .goog-te-combo {
+      width: 150px;
+      height: 36px;
+    }
+
+    .social-links {
+      width: 100%;
+
+      height: auto;
+
+      justify-content: center;
+
+      padding-top: 6px;
+    }
+
+    .social-links a {
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   /* =========================================================
      SMALL PHONES
      ========================================================= */
 
-  @media (max-width: 380px) {
+  @media (max-width: 480px) {
 
-    header {
-      padding:
-        8px 9px;
+    .header-inner {
+      padding: 6px 10px;
     }
 
     .logo {
-      gap: 6px;
+      gap: 7px;
     }
 
     .logo img {
-      width: 43px;
-
-      height: 43px;
+      width: 46px;
+      height: 46px;
     }
 
     .logo-text {
       font-size: 12px;
     }
 
-    .mobile-menu-button {
-      width: 40px;
+    .translation-wrapper {
+      flex-wrap: wrap;
 
-      height: 37px;
-
-      font-size: 21px;
+      gap: 7px;
     }
 
-    .mobile-menu .internal-links a {
+    .translation-label {
       font-size: 15px;
+    }
 
-      padding:
-        9px 7px;
+    #google_translate_element {
+      width: auto;
+    }
+
+    #google_translate_element .goog-te-combo {
+      width: 145px;
+      max-width: 100%;
     }
   }
-
 </style>
 
 
@@ -794,17 +553,12 @@
      HEADER
      ========================================================= -->
 
-<header>
+<header class="site-header">
 
   <div class="header-inner">
 
     <!-- LOGO -->
-
-    <a
-      href="/"
-      class="logo"
-      aria-label="Welcome To Serbia Shop - Home"
-    >
+    <a href="/" class="logo" aria-label="WelcomeToSerbia Shop Home">
 
       <img
         src="/favicon.webp"
@@ -819,136 +573,29 @@
     </a>
 
 
-    <!-- =====================================================
-         DESKTOP RIGHT SIDE
-         ===================================================== -->
-
-    <div class="header-right">
-
-      <!-- NAVIGATION -->
-
-      <nav aria-label="Main navigation">
-
-        <div class="internal-links">
-
-          <a href="/">Home</a>
-
-          <a href="/blog">Blog</a>
-
-          <a href="/about">About</a>
-
-          <a href="/services">Services</a>
-
-        </div>
-
-      </nav>
-
-
-      <!-- LANGUAGE -->
-
-      <div class="translate-control">
-
-        <span class="translate-label">
-          🌐 Language
-        </span>
-
-        <div id="google_translate_element"></div>
-
-      </div>
-
-
-      <!-- SOCIAL MEDIA -->
-
-      <div class="social-links">
-
-        <a
-          href="https://www.instagram.com/residencyinserbia/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-
-          <img
-            src="/INSTACIRCLE.png"
-            alt="Instagram"
-            width="24"
-            height="24"
-          />
-
-        </a>
-
-
-        <a
-          href="https://x.com/welcometos53932"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="X"
-        >
-
-          <svg
-            viewBox="0 0 16 16"
-            aria-hidden="true"
-          >
-            <path
-              fill="currentColor"
-              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a3.286 3.286 0 0 0-.95 2.282c0 .182.021.359.06.53A9.325 9.325 0 0 1 1.26 3.07a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-            />
-          </svg>
-
-        </a>
-
-
-        <a
-          href="https://www.facebook.com/profile.php?id=61585637589638"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-
-          <img
-            src="/FBBLACK.webp"
-            alt="Facebook"
-            width="24"
-            height="24"
-          />
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         MOBILE MENU BUTTON
-         ===================================================== -->
-
+    <!-- MOBILE MENU BUTTON -->
     <button
-      class="mobile-menu-button"
-      id="mobile-menu-button"
+      class="menu-toggle"
+      id="menu-toggle"
       type="button"
-      aria-label="Open menu"
+      aria-label="Open navigation menu"
       aria-expanded="false"
+      aria-controls="main-navigation"
     >
-      ☰
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-  </div>
 
+    <!-- MAIN NAVIGATION -->
+    <nav
+      class="main-navigation"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
 
-  <!-- =======================================================
-       MOBILE MENU
-       ======================================================= -->
-
-  <div
-    class="mobile-menu"
-    id="mobile-menu"
-  >
-
-    <!-- MOBILE NAVIGATION -->
-
-    <nav aria-label="Mobile navigation">
-
+      <!-- PAGE LINKS -->
       <div class="internal-links">
 
         <a href="/">Home</a>
@@ -961,94 +608,105 @@
 
       </div>
 
-    </nav>
 
+      <!-- TRANSLATION -->
+      <div class="translation-wrapper">
 
-    <!-- MOBILE LANGUAGE -->
-
-    <div class="mobile-translate">
-
-      <div class="translate-control">
-
-        <span class="translate-label">
-          🌐 Language
+        <span class="translation-label">
+          <span class="translation-icon">🌐</span>
+          <span>Language</span>
         </span>
 
-        <!--
-          IMPORTANT:
-          This is the SAME Google Translate element.
-          JavaScript moves it here when the mobile menu
-          is opened.
-        -->
-
-        <div
-          id="mobile-translate-placeholder"
-          aria-hidden="true"
-        ></div>
+        <div id="google_translate_element"></div>
 
       </div>
 
-    </div>
 
+      <!-- SOCIAL LINKS -->
+      <div class="social-links">
 
-    <!-- MOBILE SOCIAL MEDIA -->
-
-    <div class="mobile-social">
-
-      <a
-        href="https://www.instagram.com/residencyinserbia/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-
-        <img
-          src="/INSTACIRCLE.png"
-          alt="Instagram"
-          width="24"
-          height="24"
-        />
-
-      </a>
-
-
-      <a
-        href="https://x.com/welcometos53932"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="X"
-      >
-
-        <svg
-          viewBox="0 0 16 16"
-          aria-hidden="true"
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/residencyinserbia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
         >
-          <path
-            fill="currentColor"
-            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a3.286 3.286 0 0 0-.95 2.282c0 .182.021.359.06.53A9.325 9.325 0 0 1 1.26 3.07a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+          <span class="sr-only">
+            Follow WelcomeToSerbia Shop on Instagram
+          </span>
+
+          <img
+            src="/INSTACIRCLE.png"
+            alt="Instagram"
+            width="24"
+            height="24"
           />
-        </svg>
-
-      </a>
+        </a>
 
 
-      <a
-        href="https://www.facebook.com/profile.php?id=61585637589638"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-      >
+        <!-- X -->
+        <a
+          href="https://x.com/welcometos53932"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <span class="sr-only">
+            Follow WelcomeToSerbia Shop on X
+          </span>
 
-        <img
-          src="/FBBLACK.webp"
-          alt="Facebook"
-          width="24"
-          height="24"
-        />
+          <svg
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+          >
+            <path
+              fill="currentColor"
+              d="M5.026 15c6.038 0 9.341-5.003
+              9.341-9.334 0-.14 0-.282-.006-.422
+              A6.685 6.685 0 0 0 16 3.542
+              a6.658 6.658 0 0 1-1.889.518
+              3.301 3.301 0 0 0 1.447-1.817
+              6.533 6.533 0 0 1-2.087.793
+              A3.286 3.286 0 0 0 7.875 6.03
+              a9.325 9.325 0 0 1-6.767-3.429
+              3.289 3.289 0 0 0 1.018 4.382
+              A3.323 3.323 0 0 1 .64 6.575v.045
+              a3.288 3.288 0 0 0 2.632 3.218
+              3.203 3.203 0 0 1-.865.115
+              3.23 3.23 0 0 1-.614-.057
+              3.283 3.283 0 0 0 3.067 2.277
+              A6.588 6.588 0 0 1 .78 13.58
+              a6.32 6.32 0 0 1-.78-.045
+              A9.344 9.344 0 0 0 5.026 15z"
+            />
+          </svg>
 
-      </a>
+        </a>
 
-    </div>
+
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/profile.php?id=61585637589638"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <span class="sr-only">
+            Follow WelcomeToSerbia Shop on Facebook
+          </span>
+
+          <img
+            src="/FBBLACK.webp"
+            alt="Facebook"
+            width="24"
+            height="24"
+          />
+        </a>
+
+      </div>
+
+    </nav>
 
   </div>
 
@@ -1056,30 +714,105 @@
 
 
 <!-- =========================================================
-     GOOGLE TRANSLATE SCRIPT
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+  <p>
+    © 2026 WelcomeToSerbia Shop. All rights reserved.
+  </p>
+
+</footer>
+
+
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
      ========================================================= -->
 
 <script is:inline>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mainNavigation = document.getElementById("main-navigation");
 
-  function googleTranslateElementInit() {
+  if (menuToggle && mainNavigation) {
+    menuToggle.addEventListener("click", () => {
 
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
+      const isOpen =
+        mainNavigation.classList.toggle("menu-open");
 
-        includedLanguages: 'en,ru',
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
-        autoDisplay: false,
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
 
-        layout:
-          google.translate.TranslateElement.InlineLayout.SIMPLE
-      },
+    });
 
-      'google_translate_element'
-    );
 
+    /* Close mobile menu after selecting a page */
+    mainNavigation
+      .querySelectorAll(".internal-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          mainNavigation.classList.remove("menu-open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        });
+
+      });
   }
+</script>
 
+
+<!-- =========================================================
+     GOOGLE TRANSLATE JAVASCRIPT
+     ========================================================= -->
+
+<script is:inline>
+  /*
+   * Google Translate requires this callback to exist
+   * BEFORE the Google Translate script loads.
+   */
+
+  window.googleTranslateElementInit = function () {
+
+    if (
+      window.google &&
+      window.google.translate &&
+      document.getElementById("google_translate_element")
+    ) {
+
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,ru",
+          autoDisplay: false,
+          layout:
+            window.google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        "google_translate_element"
+      );
+
+    }
+
+  };
 </script>
 
 
@@ -1087,161 +820,3 @@
   is:inline
   src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 ></script>
-
-
-<!-- =========================================================
-     MOBILE MENU SCRIPT
-     ========================================================= -->
-
-<script is:inline>
-
-  const menuButton =
-    document.getElementById('mobile-menu-button');
-
-  const mobileMenu =
-    document.getElementById('mobile-menu');
-
-  const translateElement =
-    document.getElementById('google_translate_element');
-
-  const desktopTranslate =
-    document.querySelector('.header-right .translate-control');
-
-  const mobileTranslatePlaceholder =
-    document.getElementById(
-      'mobile-translate-placeholder'
-    );
-
-
-  /* =========================================================
-     MOVE TRANSLATION CONTROL BETWEEN DESKTOP / MOBILE
-     ========================================================= */
-
-  function updateTranslationPosition() {
-
-    if (
-      !translateElement ||
-      !desktopTranslate ||
-      !mobileTranslatePlaceholder
-    ) {
-      return;
-    }
-
-    /*
-     * On mobile, move the actual Google Translate
-     * element into the mobile menu.
-     */
-
-    if (window.innerWidth <= 720) {
-
-      if (
-        translateElement.parentElement !==
-        mobileTranslatePlaceholder
-      ) {
-
-        mobileTranslatePlaceholder.appendChild(
-          translateElement
-        );
-
-      }
-
-    }
-
-    /*
-     * On desktop, move it back into the desktop
-     * translation control.
-     */
-
-    else {
-
-      if (
-        translateElement.parentElement !==
-        desktopTranslate
-      ) {
-
-        desktopTranslate.appendChild(
-          translateElement
-        );
-
-      }
-
-    }
-
-  }
-
-
-  /* Run when page loads */
-
-  updateTranslationPosition();
-
-
-  /* Run when screen size changes */
-
-  window.addEventListener(
-    'resize',
-    updateTranslationPosition
-  );
-
-
-  /* =========================================================
-     MOBILE MENU
-     ========================================================= */
-
-  if (menuButton && mobileMenu) {
-
-    menuButton.addEventListener(
-      'click',
-      function () {
-
-        const isOpen =
-          mobileMenu.classList.toggle('open');
-
-
-        menuButton.setAttribute(
-          'aria-expanded',
-          String(isOpen)
-        );
-
-
-        menuButton.setAttribute(
-          'aria-label',
-          isOpen
-            ? 'Close menu'
-            : 'Open menu'
-        );
-
-
-        menuButton.textContent =
-          isOpen
-            ? '✕'
-            : '☰';
-
-      }
-    );
-
-  }
-
-</script>
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer
-  style="
-    text-align: center;
-    padding: 40px 20px;
-    background: #ffffff;
-    margin-top: 40px;
-  "
->
-
-  <p>
-    &copy; 2026 WelcomeToSerbia Shop.
-    All rights reserved.
-  </p>
-
-</footer>
-
-  
