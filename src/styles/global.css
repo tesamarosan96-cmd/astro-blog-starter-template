@@ -1,59 +1,35 @@
 /*
-  WelcomeToSerbia Shop
-  Global Stylesheet
-
-  This file controls the general appearance of the entire website:
-  - Fonts
-  - Background
-  - Main content
-  - Headings
-  - Paragraphs
-  - Links
-  - Images
-  - Service cards
-  - Forms
-  - Mobile responsiveness
+  WelcomeToSerbia Shop - Global CSS
 */
 
-
 /* =========================================================
-   ROOT VARIABLES
+   COLORS
    ========================================================= */
 
 :root {
-
-  /* Main website colors */
   --accent: #0056b3;
-  --accent-light: #007bff;
-  --accent-dark: #003f82;
+  --accent-light: #edb92e;
+  --accent-dark: #003d80;
 
-  /* Main text colors */
   --black: 33, 41, 48;
-  --gray: 86, 86, 93;
   --gray-light: 235, 235, 235;
+  --gray: 86, 86, 93;
 
-  /* Website backgrounds */
-  --background: #f0f4f8;
-  --white: #ffffff;
+  --gray-dark: 86, 86, 93;
 
-  /* Shadows */
   --box-shadow:
     0 2px 6px rgba(33, 41, 48, 0.15),
-    0 8px 24px rgba(33, 41, 48, 0.12);
+    0 8px 24px rgba(33, 41, 48, 0.20);
 }
 
 
 /* =========================================================
-   SERBIA SANS FONT
+   FONT
    ========================================================= */
 
 @font-face {
-  font-family: 'Serbia Sans';
-
-  src:
-    url('/font/Srbija-sans.woff') format('woff'),
-    url('/fonts/Srbija-sans.woff') format('woff');
-
+  font-family: "Srbija Sans";
+  src: url("/fonts/Srbija-sans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -61,63 +37,30 @@
 
 
 /* =========================================================
-   GLOBAL BOX SIZING
-   ========================================================= */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-
-/* =========================================================
-   HTML
+   BASIC PAGE
    ========================================================= */
 
 html {
   margin: 0;
   padding: 0;
-
   width: 100%;
-
-  overflow-x: hidden;
-
-  scroll-behavior: smooth;
 }
 
-
-/* =========================================================
-   BODY
-   ========================================================= */
-
 body {
-  font-family: 'Serbia Sans', sans-serif;
-
+  font-family: "Srbija Sans", sans-serif;
   margin: 0;
   padding: 0;
-
   width: 100%;
-
   text-align: left;
 
   background: #f0f4f8;
-
-  color: #333;
+  color: rgb(var(--gray-dark));
 
   font-size: 20px;
-
-  font-weight: 400;
-
   line-height: 1.7;
 
   word-wrap: break-word;
-
   overflow-wrap: break-word;
-
-  overflow-x: hidden;
-
-  top: 0 !important;
 }
 
 
@@ -126,20 +69,17 @@ body {
    ========================================================= */
 
 main {
-  width: 1200px;
-
+  width: 720px;
   max-width: calc(100% - 2em);
-
-  margin: 2em auto;
-
+  margin: auto;
   padding: 3em 1em;
+  box-sizing: border-box;
 }
 
 
 /* =========================================================
    HEADINGS
-   IMPORTANT:
-   Main website headings are BLUE.
+   KEEP HEADINGS BLUE
    ========================================================= */
 
 h1,
@@ -149,22 +89,9 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5rem 0;
-
   color: #0056b3;
-
-  font-family: 'Serbia Sans', sans-serif;
-
-  font-weight: 700;
-
   line-height: 1.2;
-
-  overflow-wrap: break-word;
 }
-
-
-/* =========================================================
-   HEADING SIZES
-   ========================================================= */
 
 h1 {
   font-size: 3.052em;
@@ -186,49 +113,23 @@ h5 {
   font-size: 1.25em;
 }
 
-h6 {
-  font-size: 1em;
-}
-
 
 /* =========================================================
-   PARAGRAPHS
+   TEXT
    ========================================================= */
 
 p {
-  margin-top: 0;
-
   margin-bottom: 1em;
-
-  color: #555;
-
-  font-weight: 400;
-
-  line-height: 1.7;
-
-  overflow-wrap: break-word;
-}
-
-
-/* =========================================================
-   LISTS
-   ========================================================= */
-
-ul,
-ol {
-  overflow-wrap: break-word;
+  color: #56565d;
 }
 
 li {
-  color: #555;
-
-  line-height: 1.7;
+  color: #56565d;
 }
 
-
-/* =========================================================
-   BOLD TEXT
-   ========================================================= */
+.prose p {
+  margin-bottom: 2em;
+}
 
 strong,
 b {
@@ -242,17 +143,11 @@ b {
 
 a {
   color: #0056b3;
-
   text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    opacity 0.25s ease;
 }
 
 a:hover {
-  color: #003f82;
-
+  color: #003d80;
   text-decoration: underline;
 }
 
@@ -263,59 +158,27 @@ a:hover {
 
 img {
   max-width: 100%;
-
   height: auto;
-
-  display: block;
-
   border-radius: 8px;
 }
 
 
 /* =========================================================
-   TABLES
+   FORMS
    ========================================================= */
-
-table {
-  width: 100%;
-
-  border-collapse: collapse;
-
-  overflow-wrap: break-word;
-}
-
-
-/* =========================================================
-   FORM ELEMENTS
-   ========================================================= */
-
-input,
-textarea,
-select,
-button {
-  font-family: inherit;
-}
 
 textarea {
   width: 100%;
-
   font-size: 16px;
-
-  padding: 0.7rem;
-
-  border: 1px solid #ddd;
-
-  border-radius: 5px;
-
   box-sizing: border-box;
 }
 
 input {
   font-size: 16px;
+}
 
-  max-width: 100%;
-
-  box-sizing: border-box;
+table {
+  width: 100%;
 }
 
 
@@ -325,22 +188,13 @@ input {
 
 code {
   padding: 2px 5px;
-
-  background-color: #ebebeb;
-
+  background-color: rgb(var(--gray-light));
   border-radius: 2px;
-
-  font-size: 0.9em;
 }
 
 pre {
   padding: 1.5em;
-
   border-radius: 8px;
-
-  overflow-x: auto;
-
-  max-width: 100%;
 }
 
 pre > code {
@@ -354,166 +208,42 @@ pre > code {
 
 blockquote {
   border-left: 4px solid #0056b3;
-
-  padding:
-    0 0 0 20px;
-
+  padding: 0 0 0 20px;
   margin: 0;
-
   font-size: 1.333em;
 }
 
 
 /* =========================================================
-   HORIZONTAL RULE
+   HORIZONTAL LINE
    ========================================================= */
 
 hr {
   border: none;
-
-  border-top:
-    1px solid #ebebeb;
-
-  margin:
-    2rem 0;
+  border-top: 1px solid rgb(var(--gray-light));
 }
 
 
 /* =========================================================
-   BLOG / PROSE
-   ========================================================= */
-
-.prose p {
-  margin-bottom: 2em;
-}
-
-
-/* =========================================================
-   SERVICES PAGE
+   SERVICES
    ========================================================= */
 
 .services-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
   gap: 2rem;
-
-  width: 100%;
-
   margin: 2rem 0;
 }
 
-
-/* =========================================================
-   SERVICE ITEM
-   ========================================================= */
-
 .service-item {
-  border:
-    1px solid #eaeaea;
-
+  border: 1px solid #eaeaea;
   padding: 1.5rem;
-
-  border-radius: 10px;
-
+  border-radius: 8px;
   background-color: #ffffff;
-
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.1);
-
-  min-width: 0;
-}
-
-
-/* =========================================================
-   SERVICE ITEM HEADINGS
-   ========================================================= */
-
-.service-item h2,
-.service-item h3,
-.service-item h4 {
-  color: #0056b3;
-}
-
-
-/* =========================================================
-   SERVICE CARDS
-   ========================================================= */
-
-.service-card {
-  background: #ffffff;
-
-  padding:
-    40px 30px;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 8px 20px rgba(0, 86, 179, 0.08);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-
-  text-align: left;
-
-  display: flex;
-
-  flex-direction: column;
-
-  min-height: 100%;
-
-  border-top:
-    5px solid #007bff;
-
-  min-width: 0;
-}
-
-
-/* =========================================================
-   SERVICE CARD HOVER
-   ========================================================= */
-
-.service-card:hover {
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 12px 30px rgba(0, 86, 179, 0.15);
-}
-
-
-/* =========================================================
-   SERVICE CARD HEADING
-   ========================================================= */
-
-.service-card h2 {
-  font-size: 1.6rem;
-
-  color: #0056b3;
-
-  margin:
-    0 0 15px 0;
-
-  font-weight: 700;
-
-  line-height: 1.25;
-}
-
-
-/* =========================================================
-   SERVICE CARD TEXT
-   ========================================================= */
-
-.service-card p {
-  color: #555;
-
-  line-height: 1.6;
-
-  margin: 0;
-
-  font-weight: 400;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -523,22 +253,10 @@ hr {
 
 .contact-section {
   margin-top: 3rem;
-
   padding: 2rem;
-
   background-color: #f9f9f9;
-
-  border-radius: 10px;
-
-  width: 100%;
-
-  box-sizing: border-box;
+  border-radius: 8px;
 }
-
-
-/* =========================================================
-   FORM GROUP
-   ========================================================= */
 
 .form-group {
   margin-bottom: 1rem;
@@ -546,23 +264,16 @@ hr {
 
 .form-group label {
   display: block;
-
   margin-bottom: 0.5rem;
-
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-
-  padding: 0.7rem;
-
-  border:
-    1px solid #ddd;
-
+  padding: 0.5rem;
+  border: 1px solid #ddd;
   border-radius: 4px;
-
   box-sizing: border-box;
 }
 
@@ -573,137 +284,60 @@ hr {
 
 .btn {
   background-color: #0056b3;
-
   color: white;
-
-  padding:
-    0.6rem 1.2rem;
-
+  padding: 0.5rem 1rem;
   border: none;
-
-  border-radius: 5px;
-
+  border-radius: 4px;
   cursor: pointer;
-
-  font-family: inherit;
-
-  font-size: 16px;
-
-  transition:
-    background-color 0.25s ease;
 }
 
 .btn:hover {
-  background-color: #003f82;
-}
-
-
-/* =========================================================
-   SCREEN-READER ONLY
-   ========================================================= */
-
-.sr-only {
-  border: 0;
-
-  padding: 0;
-
-  margin: -1px;
-
-  position: absolute !important;
-
-  height: 1px;
-
-  width: 1px;
-
-  overflow: hidden;
-
-  clip: rect(1px, 1px, 1px, 1px);
-
-  clip-path: inset(50%);
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   HEADER IMAGE HOVER
-   ========================================================= */
-
-header a img {
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-header a img:hover {
-  opacity: 0.8;
-
-  transform: scale(1.1);
+  background-color: #003d80;
 }
 
 
 /* =========================================================
    HEADER SOCIAL ICONS
+   THIS KEEPS INSTAGRAM / X / FACEBOOK ALIGNED
    ========================================================= */
 
-header .social-links {
+.social-links {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  gap: 10px;
-
-  flex-shrink: 0;
+  gap: 12px;
+  height: 100%;
 }
 
-header .social-links a {
+.social-links a {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   width: 32px;
-
   height: 32px;
 
+  padding: 0;
   margin: 0;
 
-  padding: 0;
-
   line-height: 0;
-
   text-decoration: none;
 }
 
-header .social-links a img {
+.social-links a img {
   display: block;
-
   width: 24px;
-
   height: 24px;
-
-  max-width: none;
-
-  margin: 0;
-
-  padding: 0;
-
   object-fit: contain;
+  margin: 0;
+  border-radius: 0;
 }
 
-header .social-links a svg {
+.social-links a svg {
   display: block;
-
   width: 24px;
-
   height: 24px;
-
   margin: 0;
-
-  padding: 0;
 }
 
 
@@ -713,110 +347,46 @@ header .social-links a svg {
 
 footer {
   width: 100%;
-
   box-sizing: border-box;
-
   text-align: center;
+  margin-top: 40px;
 }
 
 
-/* =========================================================
-   FOOTER SOCIAL ICONS
+/*
+   If your footer contains social icons,
+   this guarantees they stay together and centered.
+*/
 
-   IMPORTANT:
-   Keeps Instagram, X and Facebook together
-   in one centered horizontal row.
-   ========================================================= */
-
-footer .social-links,
-footer .footer-social-links {
-  display: flex !important;
-
-  flex-direction: row !important;
-
-  align-items: center !important;
-
-  justify-content: center !important;
-
-  gap: 16px !important;
-
-  width: 100% !important;
-
-  margin-left: auto !important;
-
-  margin-right: auto !important;
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin: 20px auto 0;
 }
 
+.footer-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-/* Individual footer icon */
+  width: 32px;
+  height: 32px;
 
-footer .social-links a,
-footer .footer-social-links a {
-  display: flex !important;
+  margin: 0;
+  padding: 0;
 
-  align-items: center !important;
-
-  justify-content: center !important;
-
-  flex: 0 0 32px !important;
-
-  width: 32px !important;
-
-  height: 32px !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-
-  line-height: 0 !important;
-
-  text-decoration: none !important;
+  line-height: 0;
 }
 
-
-/* Footer Instagram / Facebook images */
-
-footer .social-links img,
-footer .footer-social-links img {
-  display: block !important;
-
-  width: 24px !important;
-
-  height: 24px !important;
-
-  max-width: none !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-
-  object-fit: contain !important;
-}
-
-
-/* Footer X SVG */
-
-footer .social-links svg,
-footer .footer-social-links svg {
-  display: block !important;
-
-  width: 24px !important;
-
-  height: 24px !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-}
-
-
-/* Footer icon hover */
-
-footer .social-links a:hover,
-footer .footer-social-links a:hover {
-  opacity: 0.75;
-
-  text-decoration: none !important;
+.footer-social-links img,
+.footer-social-links svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
 }
 
 
@@ -824,368 +394,119 @@ footer .footer-social-links a:hover {
    GOOGLE TRANSLATE
    ========================================================= */
 
-/*
-   Hide Google's default top translation bar.
-   Our own language selector in Header.astro is used instead.
-*/
+#google_translate_element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.goog-te-banner-frame {
+  margin: 0;
+  padding: 0;
+
+  min-height: 36px;
+}
+
+#google_translate_element .goog-te-gadget {
+  font-family: "Srbija Sans", sans-serif !important;
+  font-size: 0 !important;
+}
+
+#google_translate_element .goog-te-gadget > span {
   display: none !important;
 }
 
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
+#google_translate_element select {
+  height: 34px;
+  min-width: 145px;
+
+  padding: 4px 8px;
+
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #333333;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  cursor: pointer;
 }
 
 
 /* =========================================================
-   GOOGLE TRANSLATE SELECTOR
+   SCREEN READER TEXT
+   IMPORTANT: CLOSED PROPERLY
    ========================================================= */
 
-.goog-te-gadget {
-  font-family: Arial, sans-serif !important;
-}
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
 
-.goog-te-gadget select {
-  max-width: 100%;
+  position: absolute !important;
 
-  box-sizing: border-box;
-}
+  height: 1px;
+  width: 1px;
 
+  overflow: hidden;
 
-/* Remove Google's "Powered by" text where possible */
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 
-.goog-te-gadget > span {
-  display: none !important;
-}
+  clip-path: inset(50%);
 
-
-/* =========================================================
-   MOBILE RESPONSIVENESS
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-  body {
-    font-size: 19px;
-  }
-
-  main {
-    width: 100%;
-
-    max-width: calc(100% - 1.5em);
-
-    padding:
-      2.5em 0.75em;
-  }
-
-  h1 {
-    font-size: 2.7em;
-  }
-
-  h2 {
-    font-size: 2.1em;
-  }
-
-  h3 {
-    font-size: 1.75em;
-  }
-
-  h4 {
-    font-size: 1.4em;
-  }
+  white-space: nowrap;
 }
 
 
 /* =========================================================
-   TABLET / SMALL SCREEN
+   MOBILE
    ========================================================= */
 
 @media (max-width: 720px) {
 
   body {
     font-size: 18px;
-
-    line-height: 1.6;
   }
 
   main {
     width: 100%;
-
     max-width: 100%;
-
-    margin: 0 auto;
-
-    padding:
-      2em 1em;
+    padding: 1.25em;
+    box-sizing: border-box;
   }
 
-
-  /* -----------------------------------------
-     Headings
-     ----------------------------------------- */
-
   h1 {
-    font-size: 2.3em;
-
-    line-height: 1.15;
+    font-size: 2.2em;
   }
 
   h2 {
-    font-size: 1.9em;
-
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: 1.6em;
-  }
-
-  h4 {
-    font-size: 1.35em;
-  }
-
-
-  /* -----------------------------------------
-     Paragraphs
-     ----------------------------------------- */
-
-  p {
-    line-height: 1.6;
-  }
-
-
-  /* -----------------------------------------
-     Services
-     ----------------------------------------- */
-
-  .services-grid {
-    grid-template-columns: 1fr;
-
-    gap: 1.25rem;
-
-    margin:
-      1.5rem 0;
-  }
-
-  .service-card {
-    padding:
-      28px 22px;
-
-    border-radius: 12px;
-  }
-
-  .service-card h2 {
-    font-size: 1.45rem;
-  }
-
-
-  /* -----------------------------------------
-     Contact section
-     ----------------------------------------- */
-
-  .contact-section {
-    padding: 1.25rem;
-
-    margin-top: 2rem;
-  }
-
-
-  /* -----------------------------------------
-     Tables
-     ----------------------------------------- */
-
-  table {
-    display: block;
-
-    width: 100%;
-
-    overflow-x: auto;
-  }
-
-
-  /* -----------------------------------------
-     Blockquotes
-     ----------------------------------------- */
-
-  blockquote {
-    padding-left: 15px;
-
-    font-size: 1.1em;
-  }
-
-
-  /* -----------------------------------------
-     Footer social icons
-     ----------------------------------------- */
-
-  footer .social-links,
-  footer .footer-social-links {
-    display: flex !important;
-
-    flex-direction: row !important;
-
-    align-items: center !important;
-
-    justify-content: center !important;
-
-    gap: 14px !important;
-
-    width: 100% !important;
-  }
-
-  footer .social-links a,
-  footer .footer-social-links a {
-    flex: 0 0 30px !important;
-
-    width: 30px !important;
-
-    height: 30px !important;
-  }
-
-  footer .social-links img,
-  footer .footer-social-links img,
-  footer .social-links svg,
-  footer .footer-social-links svg {
-    width: 22px !important;
-
-    height: 22px !important;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  body {
-    font-size: 17px;
-  }
-
-  main {
-    padding:
-      1.5em 0.85em;
-  }
-
-
-  /* -----------------------------------------
-     Headings
-     ----------------------------------------- */
-
-  h1 {
-    font-size: 2em;
-
-    line-height: 1.15;
-  }
-
-  h2 {
-    font-size: 1.65em;
-  }
-
-  h3 {
-    font-size: 1.45em;
-  }
-
-  h4 {
-    font-size: 1.25em;
-  }
-
-
-  /* -----------------------------------------
-     Services
-     ----------------------------------------- */
-
-  .services-grid {
-    gap: 1rem;
-  }
-
-  .service-card {
-    padding:
-      24px 18px;
-  }
-
-  .service-card h2 {
-    font-size: 1.35rem;
-
-    line-height: 1.25;
-  }
-
-  .service-card p {
-    font-size: 16px;
-
-    line-height: 1.6;
-  }
-
-
-  /* -----------------------------------------
-     Contact
-     ----------------------------------------- */
-
-  .contact-section {
-    padding: 1rem;
-  }
-
-
-  /* -----------------------------------------
-     Forms
-     ----------------------------------------- */
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 16px;
-
-    padding:
-      0.65rem;
-  }
-
-
-  /* -----------------------------------------
-     Footer
-     ----------------------------------------- */
-
-  footer .social-links,
-  footer .footer-social-links {
-    gap: 12px !important;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-  body {
-    font-size: 16px;
-  }
-
-  main {
-    padding:
-      1.25em 0.7em;
-  }
-
-  h1 {
     font-size: 1.8em;
   }
 
-  h2 {
+  h3 {
     font-size: 1.5em;
   }
 
-  h3 {
+  h4 {
     font-size: 1.3em;
   }
 
-  .service-card {
-    padding:
-      20px 16px;
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  footer .social-links,
-  footer .footer-social-links {
-    gap: 10px !important;
+  .social-links {
+    gap: 10px;
+  }
+
+  .footer-social-links {
+    gap: 12px;
+  }
+
+  #google_translate_element select {
+    min-width: 130px;
+    max-width: 160px;
   }
 }
