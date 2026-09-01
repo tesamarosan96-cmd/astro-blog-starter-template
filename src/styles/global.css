@@ -962,3 +962,163 @@ body {
   }
 
 }
+/* =========================================================
+   SOCIAL ICONS - HEADER AND FOOTER FIX
+   ========================================================= */
+
+/* Header social icons */
+header .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+header .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
+  text-decoration: none;
+}
+
+header .social-links img {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+
+header .social-links svg {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   FOOTER SOCIAL ICONS
+   ========================================================= */
+
+footer .social-links,
+footer .footer-social-links {
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  flex-direction: row !important;
+
+  gap: 16px !important;
+
+  width: 100% !important;
+
+  margin-left: auto !important;
+
+  margin-right: auto !important;
+}
+
+footer .social-links a,
+footer .footer-social-links a {
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  flex: 0 0 32px !important;
+
+  width: 32px !important;
+
+  height: 32px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  line-height: 0 !important;
+
+  text-decoration: none !important;
+}
+
+footer .social-links img,
+footer .footer-social-links img {
+  display: block !important;
+
+  width: 24px !important;
+
+  height: 24px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  object-fit: contain !important;
+}
+
+footer .social-links svg,
+footer .footer-social-links svg {
+  display: block !important;
+
+  width: 24px !important;
+
+  height: 24px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   PREVENT GLOBAL IMAGE RULES FROM MOVING ICONS
+   ========================================================= */
+
+header .social-links img,
+footer .social-links img,
+footer .footer-social-links img {
+  max-width: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  header .social-links {
+    display: none;
+  }
+
+  footer .social-links,
+  footer .footer-social-links {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 14px !important;
+  }
+}
