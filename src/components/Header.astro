@@ -1,33 +1,41 @@
 ---
 /*
- * Main site header
- * Responsive for desktop, tablet and mobile.
+ * WelcomeToSerbia Shop
+ * Responsive Header
+ *
  * Includes:
- * - WelcomeToSerbia Shop logo
- * - Navigation
+ * - Logo
+ * - Desktop navigation
+ * - Mobile hamburger menu
  * - Google Translate
- * - Social media links
+ * - Instagram
+ * - X
+ * - Facebook
  */
 ---
 
 <style is:global>
+
   /* =========================================================
      FONT
      ========================================================= */
 
   @font-face {
     font-family: 'Serbia Sans';
+
     src:
       url('/font/Srbija-sans.woff') format('woff'),
       url('/fonts/Srbija-sans.woff') format('woff');
+
     font-weight: normal;
     font-style: normal;
+
     font-display: swap;
   }
 
 
   /* =========================================================
-     GENERAL PAGE STYLES
+     GENERAL
      ========================================================= */
 
   html,
@@ -35,13 +43,11 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'Serbia Sans', sans-serif;
-
-    background-color: #f0f4f8;
-
-    color: #333;
+    width: 100%;
 
     overflow-x: hidden;
+
+    font-family: 'Serbia Sans', sans-serif;
   }
 
   *,
@@ -63,7 +69,7 @@
     padding: 10px 24px;
 
     box-shadow:
-      0 4px 12px rgba(0, 86, 179, 0.2);
+      0 4px 12px rgba(0, 86, 179, 0.20);
 
     position: relative;
 
@@ -72,7 +78,7 @@
 
 
   /* =========================================================
-     HEADER INNER CONTAINER
+     HEADER INNER
      ========================================================= */
 
   .header-inner {
@@ -101,7 +107,7 @@
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     color: white;
 
@@ -112,10 +118,14 @@
     min-width: 0;
   }
 
-  .logo img {
-    width: 65px;
+  .logo:hover {
+    text-decoration: none;
+  }
 
-    height: 65px;
+  .logo img {
+    width: 62px;
+
+    height: 62px;
 
     object-fit: contain;
 
@@ -131,13 +141,13 @@
 
     justify-content: center;
 
-    line-height: 1.15;
-
     color: white;
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: bold;
+
+    line-height: 1.15;
 
     white-space: nowrap;
   }
@@ -148,7 +158,7 @@
 
 
   /* =========================================================
-     RIGHT SIDE OF HEADER
+     DESKTOP RIGHT SIDE
      ========================================================= */
 
   .header-right {
@@ -158,7 +168,7 @@
 
     justify-content: flex-end;
 
-    gap: 18px;
+    gap: 15px;
 
     min-width: 0;
   }
@@ -172,10 +182,6 @@
     display: flex;
 
     align-items: center;
-
-    gap: 15px;
-
-    min-width: 0;
   }
 
   .internal-links {
@@ -183,7 +189,7 @@
 
     align-items: center;
 
-    gap: 6px;
+    gap: 4px;
 
     flex-wrap: nowrap;
   }
@@ -195,11 +201,11 @@
 
     justify-content: center;
 
-    text-decoration: none;
-
     color: #ffffff;
 
-    padding: 8px 12px;
+    text-decoration: none;
+
+    padding: 8px 11px;
 
     border-radius: 6px;
 
@@ -224,7 +230,10 @@
 
 
   /* =========================================================
-     LANGUAGE / TRANSLATION CONTROL
+     LANGUAGE CONTROL
+     
+     IMPORTANT:
+     There is NO white box around the language control.
      ========================================================= */
 
   .translate-control {
@@ -232,15 +241,7 @@
 
     align-items: center;
 
-    gap: 8px;
-
-    padding: 6px 9px;
-
-    background: rgba(255, 255, 255, 0.12);
-
-    border: 1px solid rgba(255, 255, 255, 0.55);
-
-    border-radius: 8px;
+    gap: 6px;
 
     color: white;
 
@@ -250,45 +251,34 @@
   }
 
   .translate-label {
+    color: white;
+
+    font-family: 'Serbia Sans', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+  }
+
+
+  /* Google Translate itself */
+
+  #google_translate_element {
     display: inline-flex;
 
     align-items: center;
 
-    color: white;
+    background: transparent;
 
-    font-family: Arial, sans-serif;
+    border: none;
 
-    font-size: 13px;
+    padding: 0;
 
-    font-weight: 600;
-
-    line-height: 1;
-  }
-
-
-  /* =========================================================
-     GOOGLE TRANSLATE
-     ========================================================= */
-
-  #google_translate_element {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: white;
-
-    border-radius: 5px;
-
-    padding: 2px 5px;
+    margin: 0;
 
     min-height: 30px;
-
-    box-shadow:
-      0 1px 4px rgba(0, 0, 0, 0.15);
-
-    overflow: hidden;
   }
 
   #google_translate_element .goog-te-gadget {
@@ -297,6 +287,8 @@
     font-size: 0 !important;
 
     line-height: 1 !important;
+
+    color: white !important;
   }
 
   #google_translate_element .goog-te-gadget select {
@@ -304,29 +296,33 @@
 
     font-size: 13px !important;
 
-    color: #333 !important;
+    color: #ffffff !important;
 
-    background: #ffffff;
+    background: transparent !important;
 
-    border: none;
+    border: none !important;
 
     border-radius: 4px;
 
-    padding: 4px 5px;
+    padding: 4px 3px;
 
-    min-width: 100px;
+    min-width: 82px;
 
-    height: 27px;
+    height: 30px;
 
     cursor: pointer;
 
     outline: none;
   }
 
-  #google_translate_element .goog-te-gadget select:focus {
-    outline: 2px solid #edb92e;
+  #google_translate_element .goog-te-gadget select option {
+    color: #333333;
 
-    outline-offset: 1px;
+    background: #ffffff;
+  }
+
+  #google_translate_element .goog-te-gadget select:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
   }
 
   #google_translate_element .goog-te-gadget > span {
@@ -335,7 +331,7 @@
 
 
   /* =========================================================
-     HIDE GOOGLE TRANSLATE TOP BAR
+     GOOGLE TRANSLATE BANNER
      ========================================================= */
 
   .goog-te-banner-frame {
@@ -352,7 +348,7 @@
 
 
   /* =========================================================
-     SOCIAL MEDIA
+     SOCIAL LINKS
      ========================================================= */
 
   .social-links {
@@ -360,7 +356,7 @@
 
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 
     flex-shrink: 0;
   }
@@ -372,13 +368,13 @@
 
     justify-content: center;
 
-    color: white;
-
-    text-decoration: none;
-
     width: 32px;
 
     height: 32px;
+
+    color: white;
+
+    text-decoration: none;
 
     transition:
       opacity 0.25s ease,
@@ -419,17 +415,27 @@
   .mobile-menu-button {
     display: none;
 
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    align-items: center;
 
-    background: rgba(255, 255, 255, 0.1);
+    justify-content: center;
 
-    color: white;
+    flex-shrink: 0;
+
+    width: 44px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
 
     border-radius: 7px;
 
-    padding: 7px 10px;
+    background: rgba(255, 255, 255, 0.08);
 
-    font-size: 22px;
+    color: white;
+
+    font-size: 23px;
 
     line-height: 1;
 
@@ -449,6 +455,168 @@
 
   .mobile-menu {
     display: none;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 10px auto 0;
+
+    padding: 12px 0 4px;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .mobile-menu .internal-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    gap: 3px;
+  }
+
+  .mobile-menu .internal-links a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    padding: 10px 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+  }
+
+  .mobile-menu .internal-links a:hover {
+    background: white;
+
+    color: #0056b3;
+  }
+
+
+  /* =========================================================
+     MOBILE LANGUAGE
+     ========================================================= */
+
+  .mobile-translate {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 11px 8px;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .mobile-translate .translate-control {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 8px;
+  }
+
+  .mobile-translate .translate-label {
+    font-size: 15px;
+  }
+
+  .mobile-translate #google_translate_element {
+    display: inline-flex;
+
+    align-items: center;
+  }
+
+  .mobile-translate
+  #google_translate_element
+  .goog-te-gadget
+  select {
+    min-width: 100px;
+
+    height: 32px;
+
+    padding: 4px;
+
+    font-size: 14px !important;
+
+    color: white !important;
+
+    background: transparent !important;
+  }
+
+
+  /* =========================================================
+     MOBILE SOCIAL LINKS
+     ========================================================= */
+
+  .mobile-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding: 11px 8px 4px;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .mobile-social a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    color: white;
+
+    text-decoration: none;
+  }
+
+  .mobile-social img {
+    width: 24px;
+
+    height: 24px;
+
+    object-fit: contain;
+
+    border-radius: 0;
+  }
+
+  .mobile-social svg {
+    width: 26px;
+
+    height: 26px;
   }
 
 
@@ -459,11 +627,12 @@
   @media (max-width: 1100px) {
 
     header {
-      padding: 10px 16px;
+      padding:
+        9px 16px;
     }
 
     .header-inner {
-      gap: 12px;
+      gap: 10px;
     }
 
     .logo {
@@ -481,30 +650,25 @@
     }
 
     .header-right {
-      gap: 8px;
+      gap: 7px;
     }
 
     .internal-links {
-      gap: 2px;
+      gap: 1px;
     }
 
     .internal-links a {
-      padding: 7px 8px;
+      padding:
+        7px 7px;
 
       font-size: 14px;
     }
 
-    .translate-label {
+    .social-links {
       display: none;
     }
 
-    .translate-control {
-      padding: 4px 5px;
-
-      margin: 0;
-    }
-
-    .social-links {
+    .translate-label {
       display: none;
     }
   }
@@ -517,25 +681,21 @@
   @media (max-width: 720px) {
 
     header {
-      padding: 9px 12px;
+      padding:
+        9px 12px;
     }
 
     .header-inner {
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
       width: 100%;
+
+      gap: 8px;
     }
 
     .logo {
-      gap: 8px;
+      max-width:
+        calc(100% - 55px);
 
-      max-width: calc(100% - 60px);
+      gap: 8px;
     }
 
     .logo img {
@@ -552,156 +712,53 @@
       white-space: normal;
     }
 
-    .mobile-menu-button {
-      display: inline-flex;
 
-      align-items: center;
-
-      justify-content: center;
-
-      flex-shrink: 0;
-    }
+    /* Hide desktop navigation */
 
     .header-right {
       display: none;
     }
 
 
-    /* -----------------------------------------
-       Mobile dropdown menu
-       ----------------------------------------- */
+    /* Show hamburger */
+
+    .mobile-menu-button {
+      display: inline-flex;
+    }
+
+
+    /* Mobile menu */
 
     .mobile-menu {
       display: none;
-
-      width: 100%;
-
-      padding: 12px 0 5px;
-
-      border-top:
-        1px solid rgba(255, 255, 255, 0.25);
-
-      margin-top: 10px;
     }
 
     .mobile-menu.open {
       display: block;
     }
 
-    .mobile-menu .internal-links {
-      display: flex;
 
-      flex-direction: column;
-
-      align-items: stretch;
-
-      gap: 4px;
-
-      width: 100%;
-    }
-
-    .mobile-menu .internal-links a {
-      width: 100%;
-
-      justify-content: flex-start;
-
-      padding: 10px 12px;
-
-      color: white;
-
-      font-size: 16px;
-
-      border-radius: 6px;
-    }
-
-    .mobile-menu .internal-links a:hover {
-      background: white;
-
-      color: #0056b3;
-    }
-
-
-    /* -----------------------------------------
-       Mobile translation
-       ----------------------------------------- */
+    /* Mobile language */
 
     .mobile-translate {
       display: flex;
-
-      align-items: center;
-
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-top: 12px;
-
-      padding-top: 12px;
-
-      border-top:
-        1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .mobile-translate .translate-label {
-      display: inline-flex;
-
-      font-size: 14px;
-    }
-
-    .mobile-translate .translate-control {
-      display: inline-flex;
-
-      margin: 0;
-
-      padding: 5px 7px;
-    }
-
-
-    /* -----------------------------------------
-       Mobile social links
-       ----------------------------------------- */
-
-    .mobile-social {
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-      margin-top: 12px;
-
-      padding-top: 12px;
-
-      border-top:
-        1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .mobile-social a {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 32px;
-
-      height: 32px;
-
-      color: white;
     }
   }
 
 
   /* =========================================================
-     VERY SMALL PHONES
+     SMALL PHONES
      ========================================================= */
 
   @media (max-width: 380px) {
 
     header {
-      padding-left: 9px;
+      padding:
+        8px 9px;
+    }
 
-      padding-right: 9px;
+    .logo {
+      gap: 6px;
     }
 
     .logo img {
@@ -715,11 +772,21 @@
     }
 
     .mobile-menu-button {
-      padding: 6px 9px;
+      width: 40px;
 
-      font-size: 20px;
+      height: 37px;
+
+      font-size: 21px;
+    }
+
+    .mobile-menu .internal-links a {
+      font-size: 15px;
+
+      padding:
+        9px 7px;
     }
   }
+
 </style>
 
 
@@ -732,7 +799,12 @@
   <div class="header-inner">
 
     <!-- LOGO -->
-    <a href="/" class="logo">
+
+    <a
+      href="/"
+      class="logo"
+      aria-label="Welcome To Serbia Shop - Home"
+    >
 
       <img
         src="/favicon.webp"
@@ -747,8 +819,13 @@
     </a>
 
 
-    <!-- DESKTOP / TABLET RIGHT SIDE -->
+    <!-- =====================================================
+         DESKTOP RIGHT SIDE
+         ===================================================== -->
+
     <div class="header-right">
+
+      <!-- NAVIGATION -->
 
       <nav aria-label="Main navigation">
 
@@ -767,7 +844,8 @@
       </nav>
 
 
-      <!-- TRANSLATION -->
+      <!-- LANGUAGE -->
+
       <div class="translate-control">
 
         <span class="translate-label">
@@ -780,16 +858,15 @@
 
 
       <!-- SOCIAL MEDIA -->
+
       <div class="social-links">
 
         <a
           href="https://www.instagram.com/residencyinserbia/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
-          <span class="sr-only">
-            Follow WelcomeToSerbia Shop on Instagram
-          </span>
 
           <img
             src="/INSTACIRCLE.png"
@@ -797,6 +874,7 @@
             width="24"
             height="24"
           />
+
         </a>
 
 
@@ -804,20 +882,16 @@
           href="https://x.com/welcometos53932"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="X"
         >
-          <span class="sr-only">
-            Follow WelcomeToSerbia Shop on X
-          </span>
 
           <svg
             viewBox="0 0 16 16"
             aria-hidden="true"
-            width="26"
-            height="26"
           >
             <path
               fill="currentColor"
-              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a3.286 3.286 0 0 0-.95 2.282c0 .182.021.359.06.53A9.325 9.325 0 0 1 1.26 3.07a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
             />
           </svg>
 
@@ -828,10 +902,8 @@
           href="https://www.facebook.com/profile.php?id=61585637589638"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
-          <span class="sr-only">
-            Follow WelcomeToSerbia Shop on Facebook
-          </span>
 
           <img
             src="/FBBLACK.webp"
@@ -847,13 +919,16 @@
     </div>
 
 
-    <!-- MOBILE MENU BUTTON -->
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+         ===================================================== -->
+
     <button
       class="mobile-menu-button"
+      id="mobile-menu-button"
       type="button"
       aria-label="Open menu"
       aria-expanded="false"
-      id="mobile-menu-button"
     >
       ☰
     </button>
@@ -869,6 +944,8 @@
     class="mobile-menu"
     id="mobile-menu"
   >
+
+    <!-- MOBILE NAVIGATION -->
 
     <nav aria-label="Mobile navigation">
 
@@ -887,7 +964,7 @@
     </nav>
 
 
-    <!-- MOBILE TRANSLATION -->
+    <!-- MOBILE LANGUAGE -->
 
     <div class="mobile-translate">
 
@@ -897,14 +974,24 @@
           🌐 Language
         </span>
 
-        <div id="google_translate_element_mobile"></div>
+        <!--
+          IMPORTANT:
+          This is the SAME Google Translate element.
+          JavaScript moves it here when the mobile menu
+          is opened.
+        -->
+
+        <div
+          id="mobile-translate-placeholder"
+          aria-hidden="true"
+        ></div>
 
       </div>
 
     </div>
 
 
-    <!-- MOBILE SOCIAL LINKS -->
+    <!-- MOBILE SOCIAL MEDIA -->
 
     <div class="mobile-social">
 
@@ -914,12 +1001,14 @@
         rel="noopener noreferrer"
         aria-label="Instagram"
       >
+
         <img
           src="/INSTACIRCLE.png"
           alt="Instagram"
           width="24"
           height="24"
         />
+
       </a>
 
 
@@ -929,17 +1018,17 @@
         rel="noopener noreferrer"
         aria-label="X"
       >
+
         <svg
           viewBox="0 0 16 16"
           aria-hidden="true"
-          width="26"
-          height="26"
         >
           <path
             fill="currentColor"
             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a3.286 3.286 0 0 0-.95 2.282c0 .182.021.359.06.53A9.325 9.325 0 0 1 1.26 3.07a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
           />
         </svg>
+
       </a>
 
 
@@ -949,12 +1038,14 @@
         rel="noopener noreferrer"
         aria-label="Facebook"
       >
+
         <img
           src="/FBBLACK.webp"
           alt="Facebook"
           width="24"
           height="24"
         />
+
       </a>
 
     </div>
@@ -965,40 +1056,26 @@
 
 
 <!-- =========================================================
-     GOOGLE TRANSLATE
+     GOOGLE TRANSLATE SCRIPT
      ========================================================= -->
 
 <script is:inline>
 
   function googleTranslateElementInit() {
 
-    /*
-     * Desktop translator
-     */
     new google.translate.TranslateElement(
       {
         pageLanguage: 'en',
+
         includedLanguages: 'en,ru',
+
         autoDisplay: false,
+
         layout:
           google.translate.TranslateElement.InlineLayout.SIMPLE
       },
+
       'google_translate_element'
-    );
-
-
-    /*
-     * Mobile translator
-     */
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        includedLanguages: 'en,ru',
-        autoDisplay: false,
-        layout:
-          google.translate.TranslateElement.InlineLayout.SIMPLE
-      },
-      'google_translate_element_mobile'
     );
 
   }
@@ -1013,7 +1090,7 @@
 
 
 <!-- =========================================================
-     MOBILE MENU JAVASCRIPT
+     MOBILE MENU SCRIPT
      ========================================================= -->
 
 <script is:inline>
@@ -1024,32 +1101,123 @@
   const mobileMenu =
     document.getElementById('mobile-menu');
 
+  const translateElement =
+    document.getElementById('google_translate_element');
+
+  const desktopTranslate =
+    document.querySelector('.header-right .translate-control');
+
+  const mobileTranslatePlaceholder =
+    document.getElementById(
+      'mobile-translate-placeholder'
+    );
+
+
+  /* =========================================================
+     MOVE TRANSLATION CONTROL BETWEEN DESKTOP / MOBILE
+     ========================================================= */
+
+  function updateTranslationPosition() {
+
+    if (
+      !translateElement ||
+      !desktopTranslate ||
+      !mobileTranslatePlaceholder
+    ) {
+      return;
+    }
+
+    /*
+     * On mobile, move the actual Google Translate
+     * element into the mobile menu.
+     */
+
+    if (window.innerWidth <= 720) {
+
+      if (
+        translateElement.parentElement !==
+        mobileTranslatePlaceholder
+      ) {
+
+        mobileTranslatePlaceholder.appendChild(
+          translateElement
+        );
+
+      }
+
+    }
+
+    /*
+     * On desktop, move it back into the desktop
+     * translation control.
+     */
+
+    else {
+
+      if (
+        translateElement.parentElement !==
+        desktopTranslate
+      ) {
+
+        desktopTranslate.appendChild(
+          translateElement
+        );
+
+      }
+
+    }
+
+  }
+
+
+  /* Run when page loads */
+
+  updateTranslationPosition();
+
+
+  /* Run when screen size changes */
+
+  window.addEventListener(
+    'resize',
+    updateTranslationPosition
+  );
+
+
+  /* =========================================================
+     MOBILE MENU
+     ========================================================= */
 
   if (menuButton && mobileMenu) {
 
-    menuButton.addEventListener('click', () => {
+    menuButton.addEventListener(
+      'click',
+      function () {
 
-      const isOpen =
-        mobileMenu.classList.toggle('open');
+        const isOpen =
+          mobileMenu.classList.toggle('open');
 
-      menuButton.setAttribute(
-        'aria-expanded',
-        String(isOpen)
-      );
 
-      menuButton.setAttribute(
-        'aria-label',
-        isOpen
-          ? 'Close menu'
-          : 'Open menu'
-      );
+        menuButton.setAttribute(
+          'aria-expanded',
+          String(isOpen)
+        );
 
-      menuButton.textContent =
-        isOpen
-          ? '✕'
-          : '☰';
 
-    });
+        menuButton.setAttribute(
+          'aria-label',
+          isOpen
+            ? 'Close menu'
+            : 'Open menu'
+        );
+
+
+        menuButton.textContent =
+          isOpen
+            ? '✕'
+            : '☰';
+
+      }
+    );
 
   }
 
@@ -1075,3 +1243,5 @@
   </p>
 
 </footer>
+
+  
