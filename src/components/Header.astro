@@ -1,17 +1,16 @@
 ---
 /*
- * WelcomeToSerbia Shop - Main Header
- * Responsive desktop + mobile navigation
+ * WelcomeToSerbia Shop
+ * Main responsive header
  * Google Translate: English / Russian
----
+ */
 ---
 
 <style is:global>
   /* =========================================================
-     GOOGLE TRANSLATE - GENERAL FIXES
+     GOOGLE TRANSLATE
      ========================================================= */
 
-  /* Prevent Google's translation banner from pushing the page down */
   body {
     top: 0 !important;
   }
@@ -20,19 +19,30 @@
     display: none !important;
   }
 
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+
   .goog-te-gadget {
     font-family: Arial, sans-serif !important;
   }
 
-  .goog-te-gadget span {
+  .goog-te-gadget > span {
     display: none !important;
   }
 
-  /* The actual Google language dropdown */
+  #google_translate_element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 34px;
+  }
+
   #google_translate_element .goog-te-combo {
     width: 150px;
     height: 34px;
-
     padding: 4px 8px;
 
     border: 1px solid #d6dce5;
@@ -45,17 +55,12 @@
     font-size: 14px;
 
     cursor: pointer;
-    outline: none;
   }
 
   #google_translate_element .goog-te-combo:hover {
     border-color: #0056b3;
   }
 
-  #google_translate_element .goog-te-combo:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.15);
-  }
 
   /* =========================================================
      HEADER
@@ -67,8 +72,7 @@
 
     background: #0056b3;
 
-    box-shadow:
-      0 4px 12px rgba(0, 86, 179, 0.20);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.20);
 
     position: relative;
     z-index: 1000;
@@ -88,6 +92,7 @@
 
     gap: 20px;
   }
+
 
   /* =========================================================
      LOGO
@@ -140,6 +145,7 @@
     color: #ffffff;
   }
 
+
   /* =========================================================
      NAVIGATION
      ========================================================= */
@@ -187,11 +193,13 @@
   .internal-links a:hover {
     background-color: #ffffff;
     color: #0056b3;
+
     text-decoration: none;
   }
 
+
   /* =========================================================
-     TRANSLATION
+     TRANSLATION AREA
      ========================================================= */
 
   .translation-wrapper {
@@ -234,16 +242,6 @@
     line-height: 1;
   }
 
-  #google_translate_element {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 34px;
-
-    margin: 0;
-    padding: 0;
-  }
 
   /* =========================================================
      SOCIAL ICONS
@@ -288,6 +286,7 @@
   .social-links a:hover {
     opacity: 0.8;
     transform: translateY(-1px);
+
     text-decoration: none;
   }
 
@@ -312,6 +311,7 @@
 
     margin: 0;
   }
+
 
   /* =========================================================
      MOBILE MENU BUTTON
@@ -346,15 +346,12 @@
     background: #ffffff;
 
     border-radius: 2px;
-
-    transition:
-      transform 0.2s ease,
-      opacity 0.2s ease;
   }
 
   .menu-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
   }
+
 
   /* =========================================================
      FOOTER
@@ -362,7 +359,6 @@
 
   .site-footer {
     width: 100%;
-
     box-sizing: border-box;
 
     margin-top: 40px;
@@ -382,8 +378,9 @@
     font-size: 18px;
   }
 
+
   /* =========================================================
-     MOBILE / TABLET
+     MOBILE
      ========================================================= */
 
   @media (max-width: 900px) {
@@ -426,8 +423,7 @@
 
       background: #0056b3;
 
-      box-shadow:
-        0 8px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 
       flex-direction: column;
 
@@ -504,6 +500,7 @@
     }
   }
 
+
   /* =========================================================
      SMALL PHONES
      ========================================================= */
@@ -537,13 +534,8 @@
       font-size: 15px;
     }
 
-    #google_translate_element {
-      width: auto;
-    }
-
     #google_translate_element .goog-te-combo {
       width: 145px;
-      max-width: 100%;
     }
   }
 </style>
@@ -558,7 +550,12 @@
   <div class="header-inner">
 
     <!-- LOGO -->
-    <a href="/" class="logo" aria-label="WelcomeToSerbia Shop Home">
+
+    <a
+      href="/"
+      class="logo"
+      aria-label="WelcomeToSerbia Shop Home"
+    >
 
       <img
         src="/favicon.webp"
@@ -574,6 +571,7 @@
 
 
     <!-- MOBILE MENU BUTTON -->
+
     <button
       class="menu-toggle"
       id="menu-toggle"
@@ -588,7 +586,8 @@
     </button>
 
 
-    <!-- MAIN NAVIGATION -->
+    <!-- NAVIGATION -->
+
     <nav
       class="main-navigation"
       id="main-navigation"
@@ -596,6 +595,7 @@
     >
 
       <!-- PAGE LINKS -->
+
       <div class="internal-links">
 
         <a href="/">Home</a>
@@ -609,7 +609,8 @@
       </div>
 
 
-      <!-- TRANSLATION -->
+      <!-- LANGUAGE -->
+
       <div class="translation-wrapper">
 
         <span class="translation-label">
@@ -622,16 +623,19 @@
       </div>
 
 
-      <!-- SOCIAL LINKS -->
+      <!-- SOCIAL MEDIA -->
+
       <div class="social-links">
 
         <!-- Instagram -->
+
         <a
           href="https://www.instagram.com/residencyinserbia/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
+
           <span class="sr-only">
             Follow WelcomeToSerbia Shop on Instagram
           </span>
@@ -642,16 +646,19 @@
             width="24"
             height="24"
           />
+
         </a>
 
 
         <!-- X -->
+
         <a
           href="https://x.com/welcometos53932"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="X"
         >
+
           <span class="sr-only">
             Follow WelcomeToSerbia Shop on X
           </span>
@@ -686,12 +693,14 @@
 
 
         <!-- Facebook -->
+
         <a
           href="https://www.facebook.com/profile.php?id=61585637589638"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
+
           <span class="sr-only">
             Follow WelcomeToSerbia Shop on Facebook
           </span>
@@ -702,6 +711,7 @@
             width="24"
             height="24"
           />
+
         </a>
 
       </div>
@@ -727,7 +737,7 @@
 
 
 <!-- =========================================================
-     MOBILE MENU JAVASCRIPT
+     MOBILE MENU
      ========================================================= -->
 
 <script is:inline>
@@ -735,6 +745,7 @@
   const mainNavigation = document.getElementById("main-navigation");
 
   if (menuToggle && mainNavigation) {
+
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
@@ -754,8 +765,6 @@
 
     });
 
-
-    /* Close mobile menu after selecting a page */
     mainNavigation
       .querySelectorAll(".internal-links a")
       .forEach((link) => {
@@ -782,15 +791,10 @@
 
 
 <!-- =========================================================
-     GOOGLE TRANSLATE JAVASCRIPT
+     GOOGLE TRANSLATE
      ========================================================= -->
 
 <script is:inline>
-  /*
-   * Google Translate requires this callback to exist
-   * BEFORE the Google Translate script loads.
-   */
-
   window.googleTranslateElementInit = function () {
 
     if (
@@ -803,9 +807,7 @@
         {
           pageLanguage: "en",
           includedLanguages: "en,ru",
-          autoDisplay: false,
-          layout:
-            window.google.translate.TranslateElement.InlineLayout.SIMPLE
+          autoDisplay: false
         },
         "google_translate_element"
       );
