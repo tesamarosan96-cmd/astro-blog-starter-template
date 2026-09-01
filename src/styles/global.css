@@ -116,6 +116,8 @@ body {
   overflow-wrap: break-word;
 
   overflow-x: hidden;
+
+  top: 0 !important;
 }
 
 
@@ -641,6 +643,184 @@ header a img:hover {
 
 
 /* =========================================================
+   HEADER SOCIAL ICONS
+   ========================================================= */
+
+header .social-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+header .social-links a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 32px;
+
+  height: 32px;
+
+  margin: 0;
+
+  padding: 0;
+
+  line-height: 0;
+
+  text-decoration: none;
+}
+
+header .social-links a img {
+  display: block;
+
+  width: 24px;
+
+  height: 24px;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  object-fit: contain;
+}
+
+header .social-links a svg {
+  display: block;
+
+  width: 24px;
+
+  height: 24px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER SOCIAL ICONS
+
+   IMPORTANT:
+   Keeps Instagram, X and Facebook together
+   in one centered horizontal row.
+   ========================================================= */
+
+footer .social-links,
+footer .footer-social-links {
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 16px !important;
+
+  width: 100% !important;
+
+  margin-left: auto !important;
+
+  margin-right: auto !important;
+}
+
+
+/* Individual footer icon */
+
+footer .social-links a,
+footer .footer-social-links a {
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  flex: 0 0 32px !important;
+
+  width: 32px !important;
+
+  height: 32px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  line-height: 0 !important;
+
+  text-decoration: none !important;
+}
+
+
+/* Footer Instagram / Facebook images */
+
+footer .social-links img,
+footer .footer-social-links img {
+  display: block !important;
+
+  width: 24px !important;
+
+  height: 24px !important;
+
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  object-fit: contain !important;
+}
+
+
+/* Footer X SVG */
+
+footer .social-links svg,
+footer .footer-social-links svg {
+  display: block !important;
+
+  width: 24px !important;
+
+  height: 24px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* Footer icon hover */
+
+footer .social-links a:hover,
+footer .footer-social-links a:hover {
+  opacity: 0.75;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
    GOOGLE TRANSLATE
    ========================================================= */
 
@@ -657,10 +837,6 @@ header a img:hover {
   display: none !important;
 }
 
-body {
-  top: 0 !important;
-}
-
 
 /* =========================================================
    GOOGLE TRANSLATE SELECTOR
@@ -672,6 +848,8 @@ body {
 
 .goog-te-gadget select {
   max-width: 100%;
+
+  box-sizing: border-box;
 }
 
 
@@ -716,7 +894,6 @@ body {
   h4 {
     font-size: 1.4em;
   }
-
 }
 
 
@@ -837,6 +1014,43 @@ body {
     font-size: 1.1em;
   }
 
+
+  /* -----------------------------------------
+     Footer social icons
+     ----------------------------------------- */
+
+  footer .social-links,
+  footer .footer-social-links {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 14px !important;
+
+    width: 100% !important;
+  }
+
+  footer .social-links a,
+  footer .footer-social-links a {
+    flex: 0 0 30px !important;
+
+    width: 30px !important;
+
+    height: 30px !important;
+  }
+
+  footer .social-links img,
+  footer .footer-social-links img,
+  footer .social-links svg,
+  footer .footer-social-links svg {
+    width: 22px !important;
+
+    height: 22px !important;
+  }
 }
 
 
@@ -926,6 +1140,15 @@ body {
       0.65rem;
   }
 
+
+  /* -----------------------------------------
+     Footer
+     ----------------------------------------- */
+
+  footer .social-links,
+  footer .footer-social-links {
+    gap: 12px !important;
+  }
 }
 
 
@@ -961,164 +1184,8 @@ body {
       20px 16px;
   }
 
-}
-/* =========================================================
-   SOCIAL ICONS - HEADER AND FOOTER FIX
-   ========================================================= */
-
-/* Header social icons */
-header .social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-header .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  margin: 0;
-  padding: 0;
-
-  line-height: 0;
-  text-decoration: none;
-}
-
-header .social-links img {
-  display: block;
-
-  width: 24px;
-  height: 24px;
-
-  margin: 0;
-  padding: 0;
-
-  object-fit: contain;
-}
-
-header .social-links svg {
-  display: block;
-
-  width: 24px;
-  height: 24px;
-
-  margin: 0;
-  padding: 0;
-}
-
-
-/* =========================================================
-   FOOTER SOCIAL ICONS
-   ========================================================= */
-
-footer .social-links,
-footer .footer-social-links {
-  display: flex !important;
-
-  align-items: center !important;
-
-  justify-content: center !important;
-
-  flex-direction: row !important;
-
-  gap: 16px !important;
-
-  width: 100% !important;
-
-  margin-left: auto !important;
-
-  margin-right: auto !important;
-}
-
-footer .social-links a,
-footer .footer-social-links a {
-  display: flex !important;
-
-  align-items: center !important;
-
-  justify-content: center !important;
-
-  flex: 0 0 32px !important;
-
-  width: 32px !important;
-
-  height: 32px !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-
-  line-height: 0 !important;
-
-  text-decoration: none !important;
-}
-
-footer .social-links img,
-footer .footer-social-links img {
-  display: block !important;
-
-  width: 24px !important;
-
-  height: 24px !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-
-  object-fit: contain !important;
-}
-
-footer .social-links svg,
-footer .footer-social-links svg {
-  display: block !important;
-
-  width: 24px !important;
-
-  height: 24px !important;
-
-  margin: 0 !important;
-
-  padding: 0 !important;
-}
-
-
-/* =========================================================
-   PREVENT GLOBAL IMAGE RULES FROM MOVING ICONS
-   ========================================================= */
-
-header .social-links img,
-footer .social-links img,
-footer .footer-social-links img {
-  max-width: none !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 720px) {
-
-  header .social-links {
-    display: none;
-  }
-
   footer .social-links,
   footer .footer-social-links {
-    display: flex !important;
-
-    flex-direction: row !important;
-
-    justify-content: center !important;
-
-    align-items: center !important;
-
-    gap: 14px !important;
+    gap: 10px !important;
   }
 }
