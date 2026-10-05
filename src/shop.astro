@@ -1,88 +1,45 @@
 ---
-const productName = "Sole entrepreneur formation";
-const price = "149.00";
+import Layout from './layouts/Layout.astro';
 ---
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+<Layout title="Shop">
+    <div class="shop-container">
+        <h1>Kupi proizvod</h1>
+        <p>Cijena: <strong>25.00 EUR</strong></p>
+        
+        <!-- PayPal gumb -->
+        <div id="paypal-button-container"></div>
+    </div>
 
-  <title>{productName}</title>
+    <style>
+        .shop-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #paypal-button-container {
+            margin-top: 30px;
+        }
+    </style>
 
-  <!-- PayPal JavaScript SDK -->
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"
-  ></script>
-</head>
-
-<body>
-
-  <main>
-    <h1>{productName}</h1>
-
-    <p>Price: €{price}</p>
-
-    <!-- PayPal button will appear here -->
-    <div id="paypal-button-container"></div>
-
-    <p id="paypal-result"></p>
-  </main>
-
-  <script>
-    // @ts-ignore
-    paypal.Buttons({
-      style: {
-        layout: "vertical",
-        shape: "rect",
-        label: "paypal"
-      },
-
-      createOrder() {
-        return fetch("/api/paypal/create-order", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            product: "welcome-to-serbia-shop"
-          })
-        })
-        .then((response) => response.json())
-        .then((order) => order.id);
-      },
-
-      onApprove(data) {
-        return fetch("/api/paypal/capture-order", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            orderID: data.orderID
-          })
-        })
-        .then((response) => response.json())
-        .then((details) => {
-          document.getElementById("paypal-result").textContent =
-            "Payment successful! Thank you for your order.";
-        });
-      },
-
-      onCancel() {
-        document.getElementById("paypal-result").textContent =
-          "Payment cancelled.";
-      },
-
-      onError(error) {
-        console.error("PayPal error:", error);
-
-        document.getElementById("paypal-result").textContent =
-          "There was a problem processing the payment.";
-      }
-
-    }).render("#paypal-button-container");
-  </script>
-
-</body>
-</html>
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '25.00',
+                            currency_code: 'EUR'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Hvala ' + details.payer.name.given_name + '! Plaćanje uspješno.');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</Layout>
