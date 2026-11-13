@@ -11,6 +11,9 @@ import Layout from '../layouts/Layout.astro';
         <div id="paypal-button-container"></div>
     </div>
 
+    <!-- Uključi PayPal JavaScript SDK (zamijeni YOUR_CLIENT_ID svojim pravim Client ID-jem) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
+
     <style>
         .shop-container {
             max-width: 600px;
@@ -24,22 +27,27 @@ import Layout from '../layouts/Layout.astro';
     </style>
 
     <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '25.00',
-                            currency_code: 'EUR'
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Hvala ' + details.payer.name.given_name + '! Plaćanje uspješno.');
-                });
+        // Osiguraj se da se skripta pokreće nakon što se PayPal SDK učita
+        window.addEventListener('load', () => {
+            if (window.paypal) {
+                window.paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '25.00',
+                                    currency_code: 'EUR'
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('Hvala ' + details.payer.name.given_name + '! Plaćanje uspješno.');
+                        });
+                    }
+                }).render('#paypal-button-container');
             }
-        }).render('#paypal-button-container');
+        });
     </script>
 </Layout>
